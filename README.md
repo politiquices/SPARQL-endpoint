@@ -1,6 +1,6 @@
 ### Build an Entity Knowledge Base
 
-This will build the SPARQL endpoint containing two graphs: wikidata pages of personalities that 
+Build the SPARQL endpoint containing two graphs: wikidata pages of personalities that 
 are on politiquices.pt and the politiquices graph with the relationships between these entities
 and links to Arquivo.PT news articles supporting these relationships.
 

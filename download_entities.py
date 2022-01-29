@@ -278,7 +278,7 @@ def main():
     # get all the unique entities wiki ids: queries + manual list
     entities_ids = gather_wiki_ids(queries, to_add=add, to_remove=remove)
 
-    # add also the entities wiki id from annotations data
+    # add also the entities' wiki id from annotations data
     if len(sys.argv) > 1:
         entities_ids.extend(get_wiki_ids_from_annotations(sys.argv[1]))
 
