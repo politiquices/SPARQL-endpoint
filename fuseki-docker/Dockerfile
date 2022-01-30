@@ -38,7 +38,7 @@ RUN curl --fail --silent --show-error --retry-connrefused --retry 3 --output jen
 COPY shiro.ini $FUSEKI_BASE/shiro.ini
 COPY config.ttl $FUSEKI_BASE/config.ttl
 COPY fuseki-data/wikidata_org.ttl.bz2 /usr/share/data/wikidata_org.ttl.bz2
-# COPY fuseki-data/politiquices.ttl /usr/share/data/politiquices.ttl
+COPY fuseki-data/politiquices.ttl /usr/share/data/politiquices.ttl
 COPY init.sh /
 RUN chmod 755 /init.sh; chmod +x /init.sh
 
