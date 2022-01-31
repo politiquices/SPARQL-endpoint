@@ -1,3 +1,4 @@
+import json
 import sys
 from collections import defaultdict
 from os import walk
@@ -8,15 +9,15 @@ from nlp_extraction.utils.utils import just_sleep, write_iterator_to_file
 
 endpoint_url = "https://query.wikidata.org/sparql"
 
+
 def batch(iterable, n=1):
-    l = len(iterable)
-    for ndx in range(0, l, n):
-        yield iterable[ndx:min(ndx + n, l)]
+    lst = len(iterable)
+    for ndx in range(0, lst, n):
+        yield iterable[ndx:min(ndx + n, lst)]
 
 
-def get_results(endpoint_url, query):
+def get_results(query):
     user_agent = "WDQS-example Python/%s.%s" % (sys.version_info[0], sys.version_info[1])
-    # TODO adjust user agent; see https://w.wiki/CX6
     sparql = SPARQLWrapper(endpoint_url, agent=user_agent)
     sparql.setQuery(query)
     sparql.setReturnFormat(JSON)
@@ -48,7 +49,7 @@ def get_names():
             """
 
         just_sleep(2, verbose=False)
-        results = get_results(endpoint_url, query)
+        results = get_results(query)
         all_results.extend(results["results"]["bindings"])
 
     return all_results
@@ -70,8 +71,14 @@ def main():
     for wiki_id, name in name.items():
         all_docs.append({'wiki_id': wiki_id, 'label': name, 'aliases': alternatives[wiki_id]})
 
+    query_names = open('entities_names.txt', 'wt', encoding="UTF8")
+    kb_index = open('entities_kb.txt', 'wt', encoding="UTF8")
     for d in all_docs:
-        print(d)
+        query_names.write(d['label']+'\n')
+        kb_index.write(json.dumps(d)+'\n')
+    query_names.close()
+    kb_index.close()
+
 
 if __name__ == '__main__':
     main()
