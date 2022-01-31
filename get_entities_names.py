@@ -1,4 +1,5 @@
 import sys
+from collections import defaultdict
 from os import walk
 
 from SPARQLWrapper import SPARQLWrapper, JSON
@@ -46,7 +47,7 @@ def get_names():
             ORDER BY ?label
             """
 
-        just_sleep(5, verbose=False)
+        just_sleep(2, verbose=False)
         results = get_results(endpoint_url, query)
         all_results.extend(results["results"]["bindings"])
 
@@ -57,6 +58,20 @@ def main():
     all_results = get_names()
     write_iterator_to_file([x['label']['value'] for x in all_results], 'entities_names.txt')
 
+    name = dict()
+    alternatives = defaultdict(list)
+
+    for entity in all_results:
+        name[entity['item']['value']] = entity['label']['value']
+        if 'alternative' in entity:
+            alternatives[entity['item']['value']].append(entity['alternative']['value'])
+
+    all_docs = []
+    for wiki_id, name in name.items():
+        all_docs.append({'wiki_id': wiki_id, 'label': name, 'aliases': alternatives[wiki_id]})
+
+    for d in all_docs:
+        print(d)
 
 if __name__ == '__main__':
     main()
