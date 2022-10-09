@@ -13,8 +13,9 @@ Get the entities:
 ```
 
 This will:
-    - download the .TTL files for a few selected political personalities
-    - concatenate all the TTL into one big compressed file ttl.bz2 file
+
+  - download the .TTL files for a few selected political personalities
+  - concatenate all the TTL into one big compressed file ttl.bz2 file
 
 Start the SPARQL instance:
 ```
