@@ -415,3 +415,26 @@
     }
     GROUP by ?cabinet ?cabinetLabel
     ORDER BY DESC (?n)
+
+
+### Education institution(s) attended by personalities from PS
+
+
+    PREFIX p: <http://www.wikidata.org/prop/>
+    PREFIX ps: <http://www.wikidata.org/prop/statement/>
+    PREFIX pq: <http://www.wikidata.org/prop/qualifier/>
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    PREFIX wd:  <http://www.wikidata.org/entity/>
+    PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+    SELECT DISTINCT ?person ?personLabel ?educatedAt ?educatedAt_label {
+      ?person wdt:P31 wd:Q5 .
+      SERVICE <http://0.0.0.0:3030/wikidata/query> {
+        ?person wdt:P102 wd:Q847263.
+        ?person rdfs:label ?personLabel
+        FILTER(LANG(?personLabel) = "pt")
+        ?person p:P69 ?educatedAtStmnt .
+        ?educatedAtStmnt ps:P69 ?educatedAt .
+        ?educatedAt rdfs:label ?educatedAt_label FILTER(LANG(?educatedAt_label) = "pt")
+      }
+    }
