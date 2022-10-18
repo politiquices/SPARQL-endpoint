@@ -380,8 +380,8 @@
     PREFIX wd: <http://www.wikidata.org/entity/>
     PREFIX wdt: <http://www.wikidata.org/prop/direct/>
     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-    
-    SELECT DISTINCT ?occupation_label (COUNT(?person) AS ?n)
+
+    SELECT DISTINCT ?occupation ?occupation_label (COUNT(?person) AS ?n)
     WHERE {
       ?person wdt:P31 wd:Q5;
               rdfs:label ?personLabel FILTER(LANG(?personLabel) = "pt") .
@@ -389,10 +389,9 @@
       ?occupationStmnt ps:P106 ?occupation .
       ?occupation rdfs:label ?occupation_label FILTER(LANG(?occupation_label) = "pt").
     }
-    GROUP BY ?occupation_label
+    GROUP BY ?occupation ?occupation_label
     HAVING (?n>1)
     ORDER BY DESC (?n)
-
 
 
 ### 'Governo Constitucional' with the count of number of personalities from the graph
@@ -479,4 +478,25 @@
         ?educatedAt rdfs:label ?educatedAt_label FILTER(LANG(?educatedAt_label) = "pt").
         FILTER(LANG(?ent1_name) = "pt")
       }
-    ORDER BY ASC(?educatedAt_label) 
+    ORDER BY ASC(?educatedAt_label)
+    
+    
+### Get all the 'advogados' in the graph
+
+    PREFIX p: <http://www.wikidata.org/prop/>
+    PREFIX ps: <http://www.wikidata.org/prop/statement/>
+    PREFIX pq: <http://www.wikidata.org/prop/qualifier/>
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    PREFIX wd:  <http://www.wikidata.org/entity/>
+    PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+    SELECT ?ent1 ?ent1_name ?profissao
+    WHERE {
+        ?ent1 wdt:P31 wd:Q5;
+              rdfs:label ?ent1_name;
+              p:P106 ?occupationStmnt .
+        ?occupationStmnt ps:P106 wd:Q40348 .
+        wd:Q40348 rdfs:label ?profissao FILTER(LANG(?profissao) = "pt").
+        FILTER(LANG(?ent1_name) = "pt")
+      }
+
