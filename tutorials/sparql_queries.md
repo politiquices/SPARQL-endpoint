@@ -457,3 +457,26 @@
         wd:Q2655186 rdfs:label ?educatedAt_label FILTER(LANG(?educatedAt_label) = "pt").
         FILTER(LANG(?ent1_name) = "pt")
       }
+      
+      
+      
+      
+### Get all education instutions on the graph
+      
+    PREFIX p: <http://www.wikidata.org/prop/>
+    PREFIX ps: <http://www.wikidata.org/prop/statement/>
+    PREFIX pq: <http://www.wikidata.org/prop/qualifier/>
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    PREFIX wd:  <http://www.wikidata.org/entity/>
+    PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+    SELECT DISTINCT ?educatedAt ?educatedAt_label
+    WHERE {
+        ?ent1 wdt:P31 wd:Q5;
+              rdfs:label ?ent1_name;
+              p:P69 ?educatedAtStmnt.
+        ?educatedAtStmnt ps:P69 ?educatedAt .
+        ?educatedAt rdfs:label ?educatedAt_label FILTER(LANG(?educatedAt_label) = "pt").
+        FILTER(LANG(?ent1_name) = "pt")
+      }
+    ORDER BY ASC(?educatedAt_label) 
