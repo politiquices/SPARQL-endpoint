@@ -327,6 +327,25 @@
     ORDER BY DESC (?start)
 
 
+### All 'Legislaturas da Terceira República Portuguesa' based on persons on the graph
+
+    PREFIX p: <http://www.wikidata.org/prop/>
+    PREFIX ps: <http://www.wikidata.org/prop/statement/>
+    PREFIX pq: <http://www.wikidata.org/prop/qualifier/>
+    PREFIX wd: <http://www.wikidata.org/entity/>
+    PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+    SELECT DISTINCT ?legislature ?legislature_label WHERE {
+      ?person wdt:P31 wd:Q5;
+              wdt:P27 wd:Q45;
+              p:P39 ?officeStmnt;
+              rdfs:label ?personLabel . FILTER(LANG(?personLabel) = "pt")
+      ?officeStmnt pq:P2937 ?legislature.
+      ?legislature rdfs:label ?legislature_label . FILTER(LANG(?legislature_label) = "pt")
+    } 
+    ORDER BY DESC (?personLabel)
+
 
 ### All members of the 11th Portuguese Assembly, e.g: wd:Q25431189
 
