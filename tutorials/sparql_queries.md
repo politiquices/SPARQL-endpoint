@@ -529,13 +529,13 @@
     PREFIX wdt: <http://www.wikidata.org/prop/direct/>
     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
-    SELECT DISTINCT ?assembly ?assembly_label ?head ?head_label ?start ?end WHERE {
-      ?assembly wdt:P31 wd:Q16850120;
-                wdt:P17 wd:Q45;
-                wdt:P571 ?start;
-                wdt:P576 ?end;
-                wdt:P6 ?head;
-                rdfs:label ?assembly_label . FILTER(LANG(?assembly_label) = "pt").
+    SELECT DISTINCT ?government ?government_label ?head ?head_label ?start ?end WHERE {
+      ?government wdt:P31 wd:Q16850120;
+                  wdt:P17 wd:Q45;
+                  wdt:P571 ?start;
+                  wdt:P576 ?end;
+                  wdt:P6 ?head;
+                  rdfs:label ?government_label . FILTER(LANG(?government_label) = "pt").
       ?head rdfs:label ?head_label . FILTER(LANG(?head_label) = "pt").
     } 
     ORDER BY DESC (?start)
