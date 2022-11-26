@@ -327,6 +327,25 @@
     ORDER BY DESC (?start)
 
 
+### All 'Legislaturas da Terceira República Portuguesa' based on persons on the graph
+
+    PREFIX p: <http://www.wikidata.org/prop/>
+    PREFIX ps: <http://www.wikidata.org/prop/statement/>
+    PREFIX pq: <http://www.wikidata.org/prop/qualifier/>
+    PREFIX wd: <http://www.wikidata.org/entity/>
+    PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+    SELECT DISTINCT ?legislature ?legislature_label WHERE {
+      ?person wdt:P31 wd:Q5;
+              wdt:P27 wd:Q45;
+              p:P39 ?officeStmnt;
+              rdfs:label ?personLabel . FILTER(LANG(?personLabel) = "pt")
+      ?officeStmnt pq:P2937 ?legislature.
+      ?legislature rdfs:label ?legislature_label . FILTER(LANG(?legislature_label) = "pt")
+    } 
+    ORDER BY DESC (?personLabel)
+
 
 ### All members of the 11th Portuguese Assembly, e.g: wd:Q25431189
 
@@ -380,8 +399,8 @@
     PREFIX wd: <http://www.wikidata.org/entity/>
     PREFIX wdt: <http://www.wikidata.org/prop/direct/>
     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-    
-    SELECT DISTINCT ?occupation_label (COUNT(?person) AS ?n)
+
+    SELECT DISTINCT ?occupation ?occupation_label (COUNT(?person) AS ?n)
     WHERE {
       ?person wdt:P31 wd:Q5;
               rdfs:label ?personLabel FILTER(LANG(?personLabel) = "pt") .
@@ -389,10 +408,9 @@
       ?occupationStmnt ps:P106 ?occupation .
       ?occupation rdfs:label ?occupation_label FILTER(LANG(?occupation_label) = "pt").
     }
-    GROUP BY ?occupation_label
+    GROUP BY ?occupation ?occupation_label
     HAVING (?n>1)
     ORDER BY DESC (?n)
-
 
 
 ### 'Governo Constitucional' with the count of number of personalities from the graph
@@ -415,3 +433,109 @@
     }
     GROUP by ?cabinet ?cabinetLabel
     ORDER BY DESC (?n)
+
+
+### Education institution(s) attended by personalities from PS
+
+
+    PREFIX p: <http://www.wikidata.org/prop/>
+    PREFIX ps: <http://www.wikidata.org/prop/statement/>
+    PREFIX pq: <http://www.wikidata.org/prop/qualifier/>
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    PREFIX wd:  <http://www.wikidata.org/entity/>
+    PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+    SELECT DISTINCT ?person ?personLabel ?educatedAt ?educatedAt_label {
+      ?person wdt:P31 wd:Q5 .
+      SERVICE <http://0.0.0.0:3030/wikidata/query> {
+        ?person wdt:P102 wd:Q847263.
+        ?person rdfs:label ?personLabel
+        FILTER(LANG(?personLabel) = "pt")
+        ?person p:P69 ?educatedAtStmnt .
+        ?educatedAtStmnt ps:P69 ?educatedAt .
+        ?educatedAt rdfs:label ?educatedAt_label FILTER(LANG(?educatedAt_label) = "pt")
+      }
+    }
+    
+### Get all personalities that studied at ISEG
+    
+    PREFIX p: <http://www.wikidata.org/prop/>
+    PREFIX ps: <http://www.wikidata.org/prop/statement/>
+    PREFIX pq: <http://www.wikidata.org/prop/qualifier/>
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    PREFIX wd:  <http://www.wikidata.org/entity/>
+    PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+    SELECT ?ent1 ?ent1_name ?educatedAt_label
+    WHERE {
+        ?ent1 wdt:P31 wd:Q5;
+              rdfs:label ?ent1_name;
+              p:P69 ?educatedAtStmnt.
+        ?educatedAtStmnt ps:P69 wd:Q2655186 .
+        wd:Q2655186 rdfs:label ?educatedAt_label FILTER(LANG(?educatedAt_label) = "pt").
+        FILTER(LANG(?ent1_name) = "pt")
+      }
+      
+      
+      
+      
+### Get all education instutions on the graph
+      
+    PREFIX p: <http://www.wikidata.org/prop/>
+    PREFIX ps: <http://www.wikidata.org/prop/statement/>
+    PREFIX pq: <http://www.wikidata.org/prop/qualifier/>
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    PREFIX wd:  <http://www.wikidata.org/entity/>
+    PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+    SELECT DISTINCT ?educatedAt ?educatedAt_label
+    WHERE {
+        ?ent1 wdt:P31 wd:Q5;
+              rdfs:label ?ent1_name;
+              p:P69 ?educatedAtStmnt.
+        ?educatedAtStmnt ps:P69 ?educatedAt .
+        ?educatedAt rdfs:label ?educatedAt_label FILTER(LANG(?educatedAt_label) = "pt").
+        FILTER(LANG(?ent1_name) = "pt")
+      }
+    ORDER BY ASC(?educatedAt_label)
+    
+    
+### Get all the 'advogados' in the graph
+
+    PREFIX p: <http://www.wikidata.org/prop/>
+    PREFIX ps: <http://www.wikidata.org/prop/statement/>
+    PREFIX pq: <http://www.wikidata.org/prop/qualifier/>
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    PREFIX wd:  <http://www.wikidata.org/entity/>
+    PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+    SELECT ?ent1 ?ent1_name ?profissao
+    WHERE {
+        ?ent1 wdt:P31 wd:Q5;
+              rdfs:label ?ent1_name;
+              p:P106 ?occupationStmnt .
+        ?occupationStmnt ps:P106 wd:Q40348 .
+        wd:Q40348 rdfs:label ?profissao FILTER(LANG(?profissao) = "pt").
+        FILTER(LANG(?ent1_name) = "pt")
+      }
+
+
+### List all the Governments of Portugal since the first Republic
+
+    PREFIX p: <http://www.wikidata.org/prop/>
+    PREFIX ps: <http://www.wikidata.org/prop/statement/>
+    PREFIX pq: <http://www.wikidata.org/prop/qualifier/>
+    PREFIX wd: <http://www.wikidata.org/entity/>
+    PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+    SELECT DISTINCT ?government ?government_label ?head ?head_label ?start ?end WHERE {
+      ?government wdt:P31 wd:Q16850120;
+                  wdt:P17 wd:Q45;
+                  wdt:P571 ?start;
+                  wdt:P576 ?end;
+                  wdt:P6 ?head;
+                  rdfs:label ?government_label . FILTER(LANG(?government_label) = "pt").
+      ?head rdfs:label ?head_label . FILTER(LANG(?head_label) = "pt").
+    } 
+    ORDER BY DESC (?start)
