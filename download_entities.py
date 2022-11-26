@@ -1,16 +1,17 @@
 import csv
+import json
 import os
 import sys
-import json
+from argparse import ArgumentParser, RawDescriptionHelpFormatter
 from random import randint
 from time import sleep
 
 import requests
-
 from SPARQLWrapper import SPARQLWrapper, JSON
 
-
 # persons that are/were affiliated with a recent/relevant portuguese political party
+from nlp_extraction.utils.utils import read_ground_truth
+
 affiliated_with_relevant_political_party = """
     SELECT DISTINCT ?person ?personLabel
         WHERE {
@@ -172,25 +173,6 @@ def just_sleep(upper_bound=3, verbose=False):
     sleep(sec)
 
 
-def read_ground_truth(filename, delimiter="\t"):
-    data = []
-    with open(filename, newline="") as csv_file:
-        titles = csv.reader(csv_file, delimiter=delimiter)
-        for row in titles:
-            data.append({
-                "title": row[0],
-                "label": row[1],
-                "date": row[2],
-                "url": row[3],
-                "ent1": row[4],
-                "ent2": row[5],
-                "ent1_id": row[6],
-                "ent2_id": row[7],
-            })
-
-    return data
-
-
 def read_extra_entities(f_name):
     with open(f_name) as f_in:
         data = json.load(f_in)
@@ -262,7 +244,23 @@ def download(ids_to_retrieve):
         open(f_name, "wt").write(r.text)
 
 
+def create_args():
+    parser = ArgumentParser(
+        description=__doc__,
+        formatter_class=RawDescriptionHelpFormatter,
+    )
+    parser.add_argument(
+        "--train-data",
+        help="Path to directory with training data",
+        type=str,
+        required=False,
+    )
+    return parser
+
+
 def main():
+    parser = create_args()
+    args = parser.parse_args()
 
     # get entities from wikidata.org through SPARQL queries
     print("Selecting entities through SPARQL queries")
@@ -279,8 +277,11 @@ def main():
     entities_ids = gather_wiki_ids(queries, to_add=add, to_remove=remove)
 
     # add also the entities' wiki id from annotations data
-    if len(sys.argv) > 1:
-        entities_ids.extend(get_wiki_ids_from_annotations(sys.argv[1]))
+    if args.train_data:
+        print("Downloading also entities from the training data")
+        entities_ids.extend(get_wiki_ids_from_annotations(args.train_data))
+    else:
+        print("Not downloading entities from the training data")
 
     # download the TTL for each entity
     download(list(set(entities_ids)))
