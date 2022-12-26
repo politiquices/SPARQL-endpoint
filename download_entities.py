@@ -225,7 +225,7 @@ def download(ids_to_retrieve):
     Downloads the TTL from wikidata.org for each entity in a given list entities using a
     special endpoint, e.g.:
 
-    https://www.wikidata.org/wiki/Special:EntityData?id=Q7251&format=ttl
+    https://www.wikidata.org/wiki/Special:EntityData?id=Q610788&format=ttl
 
     """
     base_url = "https://www.wikidata.org/wiki/Special:EntityData?"
