@@ -5,12 +5,12 @@ are on politiquices.pt and the politiquices graph with the relationships between
 and links to Arquivo.PT news articles supporting these relationships.
 
 Get the entities:
-```
-    python3 -m venv <something>
-    source <something>/bin/activate
-    pip install requirements.txt
+
     make wikidata 
-```
+
+or
+
+    python download_entities.py --train-data ../data-releases/politiquices_data_v1.0.jsonl
 
 This will:
 
@@ -18,9 +18,8 @@ This will:
   - concatenate all the TTL into one big compressed file ttl.bz2 file
 
 Start the SPARQL instance:
-```
+
     make sparql
-```
 
 This will start a container running fuseki-docker, mapping port 3030 on the host to port 3030 on 
 the container, exposing a SPARQL endpoint. 
