@@ -24,7 +24,3 @@ Start the SPARQL instance:
 
 This will start a container running fuseki-docker, mapping port 3030 on the host to port 3030 on 
 the container, exposing a SPARQL endpoint. 
-
-This process a while depending on the hardware, it first just build the image and copies the 
-compressed TTL file(s) into the container, and then indexes those, building the TBD files and 
-starts the fuseki-service

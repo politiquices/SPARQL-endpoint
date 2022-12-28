@@ -1,17 +1,13 @@
-import csv
 import json
 import os
 import sys
 from argparse import ArgumentParser, RawDescriptionHelpFormatter
-from random import randint
-from time import sleep
 
 import requests
 from SPARQLWrapper import SPARQLWrapper, JSON
+from nlp_extraction.utils.utils import read_ground_truth, just_sleep
 
 # persons that are/were affiliated with a recent/relevant portuguese political party
-from nlp_extraction.utils.utils import read_ground_truth
-
 affiliated_with_relevant_political_party = """
     SELECT DISTINCT ?person ?personLabel
         WHERE {
@@ -109,7 +105,7 @@ portuguese_public_enterprises = """
     ORDER BY (?enterpriseLabel)
     """
 
-# get a list of all possible public office positions hold by a someone portuguese
+# get a list of all possible public office positions hold by someone portuguese
 public_office_positions = """
     SELECT DISTINCT ?personLabel ?person ?positionLabel ?position WHERE {
         ?person wdt:P27 wd:Q45 .
@@ -122,6 +118,29 @@ public_office_positions = """
     ORDER BY (?personLabel)
     LIMIT 100
     """
+
+
+def get_parties(personalities, batch_size=200):
+    """get all political parties associated to every personality"""
+
+    parties_id = []
+    persons = ['wd:' + str(x) for x in personalities]
+    for x in range(0, len(persons), batch_size):
+        per_query = ' '.join(persons[x:x+batch_size])
+        political_parties = f"""
+            SELECT DISTINCT ?wiki_id  
+                WHERE {{
+                    VALUES ?person {{{per_query}}} 
+                    OPTIONAL {{
+                        ?person p:P102 ?political_partyStmnt.
+                        ?political_partyStmnt ps:P102 ?wiki_id.
+                    }}
+                }}
+            """
+        results = query_wikidata(political_parties)
+        parties_id.extend([party['wiki_id']['value'].split("/")[-1] for party in results['results']['bindings']
+                           if 'wiki_id' in party])
+    return set(parties_id)
 
 
 def get_relevant_persons_based_on_public_office_positions():
@@ -164,13 +183,6 @@ def query_wikidata(sparql_query):
     sparql.setQuery(sparql_query)
     sparql.setReturnFormat(JSON)
     return sparql.query().convert()
-
-
-def just_sleep(upper_bound=3, verbose=False):
-    sec = randint(1, upper_bound)
-    if verbose:
-        print(f"sleeping for {sec} seconds")
-    sleep(sec)
 
 
 def read_extra_entities(f_name):
@@ -263,7 +275,7 @@ def main():
     args = parser.parse_args()
 
     # get entities from wikidata.org through SPARQL queries
-    print("Selecting entities through SPARQL queries")
+    print("Selecting entities from wikidata.org")
     queries = [
         affiliated_with_relevant_political_party,
         get_relevant_persons_based_on_public_office_positions(),
@@ -276,6 +288,9 @@ def main():
     # get all the unique entities wiki ids: queries + manual list
     entities_ids = gather_wiki_ids(queries, to_add=add, to_remove=remove)
 
+    # get all unique parties
+    parties_ids = get_parties(entities_ids)
+
     # add also the entities' wiki id from annotations data
     if args.train_data:
         print("Downloading also entities from the training data")
@@ -284,7 +299,7 @@ def main():
         print("Not downloading entities from the training data")
 
     # download the TTL for each entity
-    download(list(set(entities_ids)))
+    download(list(set(entities_ids).union(parties_ids)))
 
 
 if __name__ == "__main__":
