@@ -232,7 +232,7 @@ def gather_wiki_ids(queries, to_add=None, to_remove=None):
     return list(set(relevant_ids))
 
 
-def download(ids_to_retrieve):
+def download(ids_to_retrieve, overwrite=False):
     """
     Downloads the TTL from wikidata.org for each entity in a given list entities using a
     special endpoint, e.g.:
@@ -247,7 +247,7 @@ def download(ids_to_retrieve):
         os.makedirs(default_dir)
     for idx, wiki_id in enumerate(sorted(ids_to_retrieve)):
         f_name = os.path.join(default_dir, wiki_id + ".ttl")
-        if os.path.exists(f_name):
+        if os.path.exists(f_name) and overwrite:
             print(f"skipped {f_name}")
             continue
         print(f"Downloading {f_name} - {str(idx)}/ {str(len(set(ids_to_retrieve)))}")
@@ -267,12 +267,24 @@ def create_args():
         type=str,
         required=False,
     )
+
+    parser.add_argument(
+        "--overwrite",
+        help="Overwrite existing TTL files",
+        action="store_true",
+        required=False,
+    )
+
     return parser
 
 
 def main():
     parser = create_args()
     args = parser.parse_args()
+
+    # print the arguments values
+    print(f"train_data: {args.train_data}")
+    print(f"overwrite: {args.overwrite}")
 
     # get entities from wikidata.org through SPARQL queries
     print("Selecting entities from wikidata.org")
@@ -293,12 +305,11 @@ def main():
 
     # add also the entities' wiki id from annotations data
     if args.train_data:
-        print("Downloading also entities from the training data")
+        print("Selecting entities from the training data")
         entities_ids.extend(get_wiki_ids_from_annotations(args.train_data))
-    else:
-        print("Not downloading entities from the training data")
 
     # download the TTL for each entity
+    unique_ttls = len(set(entities_ids).union(parties_ids))
     download(list(set(entities_ids).union(parties_ids)))
 
 
