@@ -7,10 +7,10 @@ RUN set -eux; \
     ; \
     rm -rf /var/lib/apt/lists/*
 
-ENV FUSEKI_VERSION=3.16.0
-ENV JENA_VERSION=3.16.0
+ENV FUSEKI_VERSION=3.17.0
+ENV JENA_VERSION=3.17.0
 ENV ASF_MIRROR=http://www.apache.org/dyn/mirrors/mirrors.cgi?action=download&filename=
-ENV ASF_ARCHIVE=http://archive.apache.org/dist/
+ENV ASF_ARCHIVE=https://archive.apache.org/dist/
 
 # Config and data
 VOLUME /fuseki
