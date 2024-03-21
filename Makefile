@@ -7,4 +7,4 @@ wikidata:
 sparql:
 	# ToDo: --platform linux/arm64
 	docker build -t fuseki-docker fuseki-docker
-	docker run -dit --name jena_sparql --net politiquices -p 127.0.0.1:3030:3030 fuseki-docker /init.sh  # --tdb2 # --config=/fuseki/config.ttl
+	docker run -dit --name jena_sparql --net politiquices -p 3030:3030 fuseki-docker /init.sh  # --tdb2 # --config=/fuseki/config.ttl
