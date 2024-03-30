@@ -309,7 +309,6 @@ def main():
         entities_ids.extend(get_wiki_ids_from_annotations(args.train_data))
 
     # download the TTL for each entity
-    unique_ttls = len(set(entities_ids).union(parties_ids))
     download(list(set(entities_ids).union(parties_ids)))
 
 
