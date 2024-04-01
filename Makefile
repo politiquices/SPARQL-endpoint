@@ -1,5 +1,5 @@
 wikidata:
-	python download_entities.py --train-data politiquices_data_v2.0.jsonl
+	python download_entities.py --train-data ../data-releases/politiquices_data_v2.0.jsonl
 	cat wiki_ttl/* | bzip2 -vc > fuseki-docker/fuseki-data/wikidata_org_$(shell date +"%Y-%m-%d").ttl.bz2
 	cd fuseki-docker/fuseki-data/;ln -sf wikidata_org_$(shell date +"%Y-%m-%d").ttl.bz2 wikidata_org.ttl.bz2;cd ../..
 	python build_files.py
