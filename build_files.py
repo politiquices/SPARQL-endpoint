@@ -57,11 +57,11 @@ def get_names():
 
 def main():
     all_results = get_names()
+    all_results = sorted(all_results, key=lambda x: x['label']['value'])
     write_iterator_to_file([x['label']['value'] for x in all_results], 'entities_names.txt')
 
     name = dict()
     alternatives = defaultdict(list)
-
     for entity in all_results:
         name[entity['item']['value']] = entity['label']['value']
         if 'alternative' in entity:
