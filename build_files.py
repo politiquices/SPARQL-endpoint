@@ -26,7 +26,7 @@ def get_results(query):
 
 def get_names():
     filenames = []
-    for _, _, f_names in walk("wiki_ttl"):
+    for _, _, f_names in walk("wiki_ttl_old"):
         filenames.extend(f_names)
 
     batch_size = 400
