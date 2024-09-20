@@ -1,15 +1,15 @@
-FROM openjdk:11
+FROM ubuntu:22.04
+
+RUN apt update -q && \
+    apt install -y -q openjdk-17-jre openjdk-17-jdk-headless
 
 RUN set -eux; \
     apt-get update; \
-    apt-get install -y --no-install-recommends \
-       bash curl ca-certificates findutils coreutils pwgen \
-    ; \
+    apt-get install -y --no-install-recommends bash curl ca-certificates findutils coreutils pwgen; \
     rm -rf /var/lib/apt/lists/*
 
-ENV FUSEKI_VERSION=3.17.0
-ENV JENA_VERSION=3.17.0
-ENV ASF_MIRROR=http://www.apache.org/dyn/mirrors/mirrors.cgi?action=download&filename=
+ENV FUSEKI_VERSION=5.1.0
+ENV JENA_VERSION=5.1.0
 ENV ASF_ARCHIVE=https://archive.apache.org/dist/
 
 # Config and data
