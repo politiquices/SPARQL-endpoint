@@ -1,11 +1,31 @@
 import json
 import os
-import sys
 from argparse import ArgumentParser, RawDescriptionHelpFormatter
+from asyncio import sleep
+from random import randint
+from typing import List
 
 import requests
+import sys
 from SPARQLWrapper import SPARQLWrapper, JSON
-from nlp_extraction.utils.utils import read_ground_truth, just_sleep
+
+
+def just_sleep(upper_bound=3, verbose=False):
+    sec = randint(1, upper_bound)
+    if verbose:
+        print(f"sleeping for {sec} seconds")
+    sleep(sec)
+
+
+def read_ground_truth(filename, skip_classes: List[str] = None):
+    if skip_classes is None:
+        skip_classes = []
+    with open(filename, encoding="UTF8") as f_in:
+        data = [json.loads(line) for idx, line in enumerate(f_in)]
+    data = [entry for entry in data if entry["label"] not in skip_classes]
+    print("Considering only the classes:", sorted(set([entry["label"] for entry in data])))
+    return data
+
 
 # persons that are/were affiliated with a recent/relevant portuguese political party
 affiliated_with_relevant_political_party = """
