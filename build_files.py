@@ -1,13 +1,17 @@
 import json
-import sys
 from collections import defaultdict
 from os import walk
 
+import sys
 from SPARQLWrapper import SPARQLWrapper, JSON
 
-from nlp_extraction.utils.utils import just_sleep, write_iterator_to_file
-
 endpoint_url = "https://query.wikidata.org/sparql"
+
+
+def write_iterator_to_file(iter_struct, filename):
+    with open(filename, "wt", encoding="UTF8") as f_out:
+        for el in iter_struct:
+            f_out.write(str(el) + "\n")
 
 
 def batch(iterable, n=1):
