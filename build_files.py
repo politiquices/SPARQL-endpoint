@@ -1,6 +1,8 @@
 import json
+from asyncio import sleep
 from collections import defaultdict
 from os import walk
+from random import randint
 
 import sys
 from SPARQLWrapper import SPARQLWrapper, JSON
@@ -12,6 +14,13 @@ def write_iterator_to_file(iter_struct, filename):
     with open(filename, "wt", encoding="UTF8") as f_out:
         for el in iter_struct:
             f_out.write(str(el) + "\n")
+
+
+def just_sleep(upper_bound=3, verbose=False):
+    sec = randint(1, upper_bound)
+    if verbose:
+        print(f"sleeping for {sec} seconds")
+    sleep(sec)
 
 
 def batch(iterable, n=1):
@@ -30,7 +39,7 @@ def get_results(query):
 
 def get_names():
     filenames = []
-    for _, _, f_names in walk("wiki_ttl_old"):
+    for _, _, f_names in walk("wiki_ttl"):
         filenames.extend(f_names)
 
     batch_size = 400
