@@ -258,8 +258,6 @@ def download(ids_to_retrieve, overwrite, lang="pt"):
     special endpoint, e.g.:
 
     https://www.wikidata.org/wiki/Special:EntityData?id=Q610788&format=ttl
-
-    # wget https://www.wikidata.org/wiki/Special:EntityData/Q610788.ttl\?uselang\=pt
     """
     base_url = "https://www.wikidata.org/wiki/Special:EntityData?"
     default_dir = "wiki_ttl"
