@@ -1,7 +1,7 @@
 import json
 import os
 from argparse import ArgumentParser, RawDescriptionHelpFormatter
-from asyncio import sleep
+from time import sleep
 from random import randint
 from typing import List
 
