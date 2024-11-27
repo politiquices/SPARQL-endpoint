@@ -2,6 +2,7 @@ Abel Baptista
 Abel Carneiro
 Abílio Curto
 Abílio Dias Fernandes
+Abílio Miguel Joaquim Dias Fernandes
 Abílio Rodrigues Pereira
 Acácio Barreiros
 Acácio Pinto
@@ -13,6 +14,7 @@ Adolfo Luxúria Canibal
 Adolfo Mesquita Nunes
 Adolfo Suárez
 Adriano Moreira
+Adriano Pinto
 Adriano Vasco Rodrigues
 Adão Silva
 Afonso Candal
@@ -130,6 +132,7 @@ André Valente Martins
 André Ventura
 André de Aragão Azevedo
 Angela Merkel
+Anselmo Aníbal
 Antero Alves Monteiro Diniz
 Antonio Pedro dos Santos Simoes
 Antonio Tajani
@@ -215,6 +218,7 @@ António Mota Redol
 António Nazaré Pereira
 António Nogueira Leite
 António Norton de Matos
+António Ourique Mendes
 António Patrício Gouveia
 António Pinto Leite
 António Pinto Madureira Júnior
@@ -300,6 +304,7 @@ Basílio Horta
 Beatriz Gomes Dias
 Bebiana Cunha
 Belchior Pereira
+Belmiro Moita da Costa
 Belmiro de Azevedo
 Benjamin Netanyahu
 Bento António Gonçalves
@@ -348,6 +353,7 @@ Carlos Alberto Soares Cardoso
 Carlos Alexandre
 Carlos Antunes
 Carlos Baião Morais
+Carlos Baptista
 Carlos Bernardes
 Carlos Borrego
 Carlos Brito
@@ -384,9 +390,11 @@ Carlos Pimenta
 Carlos Pinto
 Carlos Robalo
 Carlos Santos Ferreira
+Carlos Silva Santiago
 Carlos Silva e Sousa
 Carlos Tavares
 Carlos Teixeira
+Carlos Tuta
 Carlos Veiga
 Carlos Vila Nova
 Carlos Zorrinho
@@ -406,6 +414,7 @@ Catarina Vaz Pinto
 Catarina de Albuquerque
 Cecília Honório
 Cecília Meireles
+Celeste Caeiro
 Celeste Cardona
 Celeste Correia
 Celso Cruzeiro
@@ -447,6 +456,7 @@ Daniel Adrião
 Daniel Bastos
 Daniel Bessa
 Daniel Campelo
+Daniel Chapo
 Daniel Oliveira
 Daniel Proença de Carvalho
 Daniel Sanches
@@ -462,6 +472,7 @@ Defensor Moura
 Delmiro Carreira
 Desidério Jorge da Silva
 Diamantino Durão
+Diamantino Ferreira
 Diana Ferreira
 Diana Santos
 Dieter Dellinger
@@ -548,6 +559,7 @@ Fabíola Cardoso
 Fausto de Sousa Correia
 Felicidade Vital
 Fernanda Azuaje-Fidalgo
+Fernanda Barroso
 Fernanda Pontífice
 Fernanda Ramos
 Fernanda Velez
@@ -557,6 +569,7 @@ Fernando António Aires Ferreira
 Fernando Blanqui Teixeira
 Fernando Cabral
 Fernando Condesso
+Fernando Correia Afonso
 Fernando Faria de Oliveira
 Fernando Frutuoso de Melo
 Fernando Gomes
@@ -738,6 +751,7 @@ Hugo Carvalho
 Hugo Chávez
 Hugo Costa
 Hugo Martins de Carvalho
+Hugo Moreira Luís
 Hugo Oliveira
 Hugo Patrício Oliveira
 Hugo Pires
@@ -751,6 +765,7 @@ Hélder Bataglia
 Hélder Fragueiro Antunes
 Hélder Reis
 Hélder Sousa Silva
+Hélder Spínola
 Idália Serrão
 Igrejas Caeiro
 Ilda Figueiredo
@@ -809,6 +824,7 @@ Jaime Ramos
 Jaime Reis
 Jaime Silva
 Jair Bolsonaro
+James Pereira
 Jamila Madeira
 Janusz Onyszkiewicz
 Januário Lourenço
@@ -905,6 +921,7 @@ Jorge Paulo Oliveira
 Jorge Pegado Liz
 Jorge Pinto
 Jorge Preto
+Jorge Roque da Cunha
 Jorge Salgueiro Mendes
 Jorge Sampaio
 Jorge Sequeira
@@ -991,7 +1008,6 @@ José Lamego
 José Lello
 José Lino Tranquada Gomes
 José Luis Rodríguez Zapatero
-José Luis da Cruz Vilaça
 José Luís Arnaut
 José Luís Carneiro
 José Luís Ferreira
@@ -999,6 +1015,7 @@ José Luís Gaspar Jorge
 José Luís Nogueira de Brito
 José Luís Nunes
 José Luís Pio de Abreu
+José Luís da Cruz Vilaça
 José Macedo Vieira
 José Magalhães
 José Manuel Barradas
@@ -1107,6 +1124,7 @@ João Calvão da Silva
 João Carlos Nunes Abreu
 João Castel-Branco Goulão
 João Caupers
+João Corregedor da Fonseca
 João Corvelo
 João Costa
 João Cotrim de Figueiredo
@@ -1134,9 +1152,9 @@ João Luís Fernandes
 João Malato Correia
 João Manuel da Cruz da Silva Leitão
 João Manuel de Lemos Santos
-João Maria de Lemos de Menezes Ferreira
 João Maria de Oliveira Martins
 João Martins Ferreira do Amaral
+João Menezes Ferreira
 João Miguel Nicolau
 João Miguel Tavares
 João Morais Leitão
@@ -1556,6 +1574,7 @@ Mário Soares
 Mário Sottomayor Cardia
 Mário Tomé
 Mário Zambujal
+Mónica Freitas
 Mónica Quintela
 Narana Coissoró
 Narciso Mendes Dias
@@ -1602,6 +1621,7 @@ Nuno Vasconcellos
 Nuno da Câmara Pereira
 Nélio Mendonça
 Octávio Pato
+Octávio Teixeira
 Odete Isabel
 Odete Santos
 Odete Silva
@@ -1744,6 +1764,7 @@ Pôncio Monteiro
 Quinídio Correia
 Radovan Karadžić
 Rafael Corte Real
+Raimundo Cabral
 Ramiro Moreira
 Ramón Luis Valcárcel
 Raquel Cardoso
@@ -1754,7 +1775,6 @@ Raul Rêgo
 Raúl Brito
 Raúl Castro
 Raúl Miguel Rosado Fernandes
-Recep Tayyip Erdoğan
 Regina Bastos
 Regina Tavares da Silva
 Renata Cambra
@@ -1798,6 +1818,7 @@ Roberta Medina
 Roberta Metsola Tedesco Triccas
 Roberto Carneiro
 Rodolfo Crespo
+Rodolfo Franca
 Rodrigo Alves Taxa
 Rodrigo Saraiva
 Rogério Bacalhau
@@ -1911,6 +1932,7 @@ Sónia Monteiro
 Sónia Ramos
 Sónia dos Reis
 Tavares Moreira
+Tchizé dos Santos
 Telma Guerreiro
 Telmo Correia
 Telmo Pinto
@@ -1965,7 +1987,6 @@ Victor Cunha Rego
 Victor Manuel Freire Boga
 Victor de Sá Machado
 Vidigal Amaro
-Viktor Orbán
 Violante Saramago Matos
 Virgílio Azevedo
 Virgílio Pereira
@@ -1985,6 +2006,7 @@ Vânia Neto
 Vítor Aleixo
 Vítor Alves
 Vítor Baltasar Rodrigues
+Vítor Barros
 Vítor Bento
 Vítor Cabrita Neto
 Vítor Constâncio
@@ -1994,7 +2016,6 @@ Vítor Wengorovius
 Walter Alfredo Agosto
 Walter Rosa
 Wanda Guimarães
-Welwitschia dos Santos
 Wolfgang Schäuble
 Xanana Gusmão
 Yanis Varoufakis
@@ -2007,6 +2028,7 @@ Zuraida Soares
 Álvaro Amaro
 Álvaro Arranja
 Álvaro Augusto Matos Almeida
+Álvaro Balseiro Amaro
 Álvaro Barreto
 Álvaro Brasileiro
 Álvaro Castello-Branco

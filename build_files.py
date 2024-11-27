@@ -1,5 +1,5 @@
 import json
-from asyncio import sleep
+from time import sleep
 from collections import defaultdict
 from os import walk
 from random import randint
