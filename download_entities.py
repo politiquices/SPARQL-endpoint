@@ -4,14 +4,19 @@ from argparse import ArgumentParser, RawDescriptionHelpFormatter
 from time import sleep
 from random import randint
 from typing import List
+import urllib.error
 
 import requests
 import sys
 from SPARQLWrapper import SPARQLWrapper, JSON
 
+USER_AGENT = "Politiquices/1.0 (https://github.com/politiquices; dsbatista@gmail.com) Python/%s.%s" % (
+    sys.version_info[0], sys.version_info[1]
+)
 
-def just_sleep(upper_bound=3, verbose=False):
-    sec = randint(1, upper_bound)
+
+def just_sleep(lower_bound=1, upper_bound=3, verbose=False):
+    sec = randint(lower_bound, upper_bound)
     if verbose:
         print(f"sleeping for {sec} seconds")
     sleep(sec)
@@ -21,7 +26,7 @@ def read_ground_truth(filename, skip_classes: List[str] = None):
     if skip_classes is None:
         skip_classes = []
     with open(filename, encoding="UTF8") as f_in:
-        data = [json.loads(line) for idx, line in enumerate(f_in)]
+        data = [json.loads(line) for line in f_in]
     data = [entry for entry in data if entry["label"] not in skip_classes]
     print("Considering only the classes:", sorted(set([entry["label"] for entry in data])))
     return data
@@ -136,7 +141,6 @@ public_office_positions = """
       FILTER((LANG(?positionLabel)) = "pt")
     }
     ORDER BY (?personLabel)
-    LIMIT 100
     """
 
 
@@ -157,6 +161,7 @@ def get_parties(personalities, batch_size=200):
                     }}
                 }}
             """
+        just_sleep(3)
         results = query_wikidata(political_parties)
         parties_id.extend([party['wiki_id']['value'].split("/")[-1] for party in results['results']['bindings']
                            if 'wiki_id' in party])
@@ -165,7 +170,7 @@ def get_parties(personalities, batch_size=200):
 
 def get_relevant_persons_based_on_public_office_positions():
     """
-    Read the all the wikidata portuguese public offices objects from: `public_office_positions.json`
+    Read the all the wikidata portuguese public offices objects from: `entities_config.json`
     and extract all the persons connected to it through the following property:
 
         wdt:P39 position held
@@ -177,7 +182,7 @@ def get_relevant_persons_based_on_public_office_positions():
     wiki_ids = []
     with open("entities_config.json") as f_in:
         data = json.load(f_in)
-        for k, v in data['positions'].items():
+        for _, v in data['positions'].items():
             for wiki_id, description in v.items():
                 wiki_ids.append("wd:" + wiki_id)
 
@@ -196,13 +201,22 @@ def get_relevant_persons_based_on_public_office_positions():
     return query
 
 
-def query_wikidata(sparql_query):
+def query_wikidata(sparql_query, max_retries=5):
     endpoint_url = "https://query.wikidata.org/sparql"
-    user_agent = "WDQS-example Python/%s.%s" % (sys.version_info[0], sys.version_info[1])
-    sparql = SPARQLWrapper(endpoint_url, agent=user_agent)
+    sparql = SPARQLWrapper(endpoint_url, agent=USER_AGENT)
     sparql.setQuery(sparql_query)
     sparql.setReturnFormat(JSON)
-    return sparql.query().convert()
+    for attempt in range(max_retries):
+        try:
+            return sparql.query().convert()
+        except urllib.error.HTTPError as e:
+            if e.code == 429:
+                retry_after = int(e.headers.get("Retry-After", 60))
+                print(f"Rate limited (429). Waiting {retry_after}s before retry {attempt + 1}/{max_retries}...")
+                sleep(retry_after)
+            else:
+                raise
+    raise RuntimeError(f"SPARQL query failed after {max_retries} retries due to rate limiting")
 
 
 def read_extra_entities(f_name):
@@ -223,7 +237,7 @@ def get_wiki_ids_from_annotations(f_name):
             continue
         annotated_wiki_ids.add(p1_id.split("/")[-1])
         annotated_wiki_ids.add(p2_id.split("/")[-1])
-    print(f"{len(list(annotated_wiki_ids))} entities from annotations")
+    print(f"{len(annotated_wiki_ids)} entities from annotations")
     return list(annotated_wiki_ids)
 
 
@@ -232,8 +246,8 @@ def gather_wiki_ids(queries, to_add=None, to_remove=None):
     relevant_ids = []
 
     for query in queries:
-        results = query_wikidata(query)
         just_sleep(3)
+        results = query_wikidata(query)
         wiki_ids = [r["person"]["value"].split("/")[-1] for r in results["results"]["bindings"]]
         relevant_ids.extend(wiki_ids)
 
@@ -270,9 +284,22 @@ def download(ids_to_retrieve, overwrite, lang="pt"):
             print(f"skipped {f_name}")
             continue
         print(f"Downloading {f_name} - {str(idx)}/ {str(len(set(ids_to_retrieve)))}")
-        just_sleep(2)
-        r = requests.get(base_url, params={"format": 'ttl', "id": wiki_id, "uselang": lang})
-        open(f_name, "wt").write(r.text)
+        if idx > 0:
+            just_sleep(lower_bound=2, upper_bound=5)
+        for attempt in range(5):
+            r = requests.get(base_url, params={"format": 'ttl', "id": wiki_id, "uselang": lang},
+                             headers={"User-Agent": USER_AGENT})
+            if r.status_code == 429:
+                retry_after = int(r.headers.get("Retry-After", 60))
+                print(f"Rate limited (429). Waiting {retry_after}s before retry {attempt + 1}/5...")
+                sleep(retry_after)
+                continue
+            r.raise_for_status()
+            with open(f_name, "wt") as f_out:
+                f_out.write(r.text)
+            break
+        else:
+            raise RuntimeError(f"Failed to download {wiki_id} after 5 retries due to rate limiting")
 
 
 def create_args():
@@ -303,12 +330,8 @@ def main():
 
     # print the arguments values
     print(f"train_data: {args.train_data}")
-    if args.overwrite:
-        print("Overwriting existing TTL files")
-        overwrite = True
-    else:
-        print("Not overwriting existing TTL files")
-        overwrite = False
+    overwrite = args.overwrite
+    print("Overwriting existing TTL files" if overwrite else "Not overwriting existing TTL files")
 
     # get entities from wikidata.org through SPARQL queries
     print("Selecting entities from wikidata.org")
