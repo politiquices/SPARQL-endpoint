@@ -286,20 +286,23 @@ def download(ids_to_retrieve, overwrite, lang="pt"):
         print(f"Downloading {f_name} - {str(idx)}/ {str(len(set(ids_to_retrieve)))}")
         if idx > 0:
             just_sleep(lower_bound=2, upper_bound=5)
-        for attempt in range(5):
-            r = requests.get(base_url, params={"format": 'ttl', "id": wiki_id, "uselang": lang},
-                             headers={"User-Agent": USER_AGENT})
-            if r.status_code == 429:
-                retry_after = int(r.headers.get("Retry-After", 60))
-                print(f"Rate limited (429). Waiting {retry_after}s before retry {attempt + 1}/5...")
-                sleep(retry_after)
-                continue
-            r.raise_for_status()
-            with open(f_name, "wt") as f_out:
-                f_out.write(r.text)
-            break
-        else:
-            raise RuntimeError(f"Failed to download {wiki_id} after 5 retries due to rate limiting")
+        try:
+            for attempt in range(5):
+                r = requests.get(base_url, params={"format": 'ttl', "id": wiki_id, "uselang": lang},
+                                 headers={"User-Agent": USER_AGENT})
+                if r.status_code == 429:
+                    retry_after = int(r.headers.get("Retry-After", 60))
+                    print(f"Rate limited (429). Waiting {retry_after}s before retry {attempt + 1}/5...")
+                    sleep(retry_after)
+                    continue
+                r.raise_for_status()
+                with open(f_name, "wt") as f_out:
+                    f_out.write(r.text)
+                break
+            else:
+                print(f"Failed to download {wiki_id} after 5 retries due to rate limiting")
+        except requests.exceptions.ConnectTimeout:
+            print(f"Connection timed out for {wiki_id}, skipping")
 
 
 def create_args():
