@@ -1,0 +1,14 @@
+services:
+  fuseki:
+    build: .
+    container_name: jena_sparql
+    ports:
+      - "127.0.0.1:3030:3030"
+    networks:
+      - politiquices
+    command: /init.sh
+
+networks:
+  politiquices:
+    name: politiquices
+    driver: bridge

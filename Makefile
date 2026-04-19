@@ -13,8 +13,7 @@ download-jena:
 		https://archive.apache.org/dist/jena/binaries/apache-jena-5.1.0.tar.gz
 
 sparql:
-	docker build -t fuseki-docker fuseki-docker
-	docker run -dit --name jena_sparql --net politiquices -p 127.0.0.1:3030:3030 fuseki-docker /init.sh  # --tdb2 # --config=/fuseki/config.ttl
+	docker compose -f fuseki-docker/docker-compose.yml up --build -d
 
 wikifiles:
 	cat wiki_ttl/* | bzip2 -vc > fuseki-docker/fuseki-data/wikidata_org_$(shell date +"%Y-%m-%d").ttl.bz2
