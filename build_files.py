@@ -37,6 +37,9 @@ def get_results(query):
     return sparql.query().convert()
 
 
+LANG_PRIORITY = {"pt": 0, "pt-br": 1, "en": 2}
+
+
 def get_names():
     filenames = []
     for _, _, f_names in walk("wiki_ttl"):
@@ -52,10 +55,12 @@ def get_names():
         query = f"""
             SELECT DISTINCT ?item ?label ?alternative {{
               VALUES ?item {{{wiki_ids}}}
-              ?item wdt:P31 wd:Q5.      
-              ?item rdfs:label ?label . FILTER(LANG(?label) = "pt")
+              ?item wdt:P31 wd:Q5.
+              ?item rdfs:label ?label .
+              FILTER(LANG(?label) = "pt" || LANG(?label) = "pt-br" || LANG(?label) = "en")
               OPTIONAL {{
-                ?item skos:altLabel ?alternative . FILTER(LANG(?alternative) = "pt") 
+                ?item skos:altLabel ?alternative .
+                FILTER(LANG(?alternative) = "pt" || LANG(?alternative) = "pt-br")
               }}
             }}
             ORDER BY ?label
@@ -70,19 +75,26 @@ def get_names():
 
 def main():
     all_results = get_names()
-    all_results = sorted(all_results, key=lambda x: x['label']['value'])
-    write_iterator_to_file([x['label']['value'] for x in all_results], 'entities_names.txt')
 
-    name = dict()
+    # For each entity keep the highest-priority label: pt > pt-br > en
+    best_label: dict = {}
     alternatives = defaultdict(list)
     for entity in all_results:
-        name[entity['item']['value']] = entity['label']['value']
+        wiki_id = entity['item']['value']
+        label = entity['label']['value']
+        lang = entity['label'].get('xml:lang', '')
+        priority = LANG_PRIORITY.get(lang, 99)
+        if wiki_id not in best_label or priority < best_label[wiki_id][1]:
+            best_label[wiki_id] = (label, priority)
         if 'alternative' in entity:
-            alternatives[entity['item']['value']].append(entity['alternative']['value'])
+            alt = entity['alternative']['value']
+            if alt not in alternatives[wiki_id]:
+                alternatives[wiki_id].append(alt)
 
-    all_docs = []
-    for wiki_id, name in name.items():
-        all_docs.append({'wiki_id': wiki_id, 'label': name, 'aliases': alternatives[wiki_id]})
+    all_docs = sorted(
+        [{'wiki_id': wid, 'label': lbl, 'aliases': alternatives[wid]} for wid, (lbl, _) in best_label.items()],
+        key=lambda d: d['label'],
+    )
 
     query_names = open('entities_names.txt', 'wt', encoding="UTF8")
     kb_index = open('entities_kb.txt', 'wt', encoding="UTF8")
