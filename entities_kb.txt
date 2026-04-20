@@ -22,7 +22,7 @@
 {"wiki_id": "http://www.wikidata.org/entity/Q9587210", "label": "Afonso Moura Guedes", "aliases": ["Afonso de Sousa Freire de Moura Guedes"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q106946850", "label": "Afonso Oliveira", "aliases": ["Afonso Gon\u00e7alves da Silva Oliveira"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q105763842", "label": "Afonso Sequeira Abrantes", "aliases": []}
-{"wiki_id": "http://www.wikidata.org/entity/Q311793", "label": "Agac\u00e3o IV", "aliases": ["Karim al-Hussayni", "Shah Kar\u012bm al-Hussayn\u012b", "\u0627\u0644\u0623\u0645\u06cc\u0631 \u0634\u0627\u06c1 \u06a9\u0631\u06cc\u0645 \u0627\u0644\u062d\u0633\u06cc\u0646\u064a \u0622\u063a\u0627 \u062e\u0627\u0646 \u0627\u0644\u0631\u0627\u0628\u0639"]}
+{"wiki_id": "http://www.wikidata.org/entity/Q311793", "label": "Agac\u00e3o IV", "aliases": ["Karim al-Hussayni", "Shah Kar\u012bm al-Hussayn\u012b", "\u0627\u0644\u0623\u0645\u06cc\u0631 \u0634\u0627\u06c1 \u06a9\u0631\u06cc\u0645 \u0627\u0644\u062d\u0633\u06cc\u0646\u064a \u0622\u063a\u0627 \u062e\u0627\u0646 \u0627\u0644\u0631\u0627\u0628\u0639", "Aga Khan IV"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q16143885", "label": "Agostinho Branquinho", "aliases": ["Agostinho Correia Branquinho"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q117707513", "label": "Agostinho Ferreira Barrias", "aliases": []}
 {"wiki_id": "http://www.wikidata.org/entity/Q115733616", "label": "Agostinho Lopes", "aliases": ["Agostinho Nuno de Azevedo Ferreira Lopes"]}
@@ -46,7 +46,7 @@
 {"wiki_id": "http://www.wikidata.org/entity/Q124331531", "label": "Alberto Pereira de Castro", "aliases": ["Alberto Magno Pereira de Castro"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q16487122", "label": "Alberto Ralha", "aliases": ["Alberto Jos\u00e9 Nunes Correia Ralha"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q4712100", "label": "Alberto Rom\u00e3o Madruga da Costa", "aliases": []}
-{"wiki_id": "http://www.wikidata.org/entity/Q9594512", "label": "Alberto Santos", "aliases": ["Alberto Fernando da Silva Santos", "Alberto S. Santos"]}
+{"wiki_id": "http://www.wikidata.org/entity/Q9594512", "label": "Alberto Santos", "aliases": ["Alberto Santos", "Alberto Fernando da Silva Santos", "Alberto S. Santos"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q108917135", "label": "Alberto Soares Querido", "aliases": ["Alberto Querido"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q29107257", "label": "Alberto Vaz da Silva", "aliases": ["Alberto de Mira Mendes Vaz da Silva"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q111724780", "label": "Alcides Strecht Monteiro", "aliases": ["Alcides Monteiro"]}
@@ -144,6 +144,7 @@
 {"wiki_id": "http://www.wikidata.org/entity/Q9614660", "label": "Andr\u00e9 Valente Martins", "aliases": []}
 {"wiki_id": "http://www.wikidata.org/entity/Q69935603", "label": "Andr\u00e9 Ventura", "aliases": []}
 {"wiki_id": "http://www.wikidata.org/entity/Q117356223", "label": "Andr\u00e9 de Arag\u00e3o Azevedo", "aliases": ["Andr\u00e9 Eduardo de Arag\u00e3o Gon\u00e7alves de Azevedo"]}
+{"wiki_id": "http://www.wikidata.org/entity/Q567", "label": "Angela Merkel", "aliases": []}
 {"wiki_id": "http://www.wikidata.org/entity/Q134696036", "label": "Ang\u00e9lique da Teresa", "aliases": ["Ang\u00e9lique In\u00eas da Teresa"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q131106863", "label": "Anselmo An\u00edbal", "aliases": ["Ant\u00f3nio Anselmo An\u00edbal"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q20045597", "label": "Antero Alves Monteiro Diniz", "aliases": []}
@@ -160,7 +161,7 @@
 {"wiki_id": "http://www.wikidata.org/entity/Q17420780", "label": "Ant\u00f3nio Augusto Lacerda de Queiroz", "aliases": ["Antonio Augusto Lacerda De Queir\u00f3z"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q108699775", "label": "Ant\u00f3nio Azevedo", "aliases": ["Ant\u00f3nio Belarmino Azevedo"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q124260887", "label": "Ant\u00f3nio Barata Portugal", "aliases": ["Ant\u00f3nio Manuel Barata Portugal"]}
-{"wiki_id": "http://www.wikidata.org/entity/Q2857756", "label": "Ant\u00f3nio Barreto", "aliases": ["Ant\u00f3nio Miguel Morais Barreto", "Ant\u00f3nio Miguel de Morais Barreto", "Ant\u00f3nio Miguel de Morais Taborda Barreto"]}
+{"wiki_id": "http://www.wikidata.org/entity/Q2857756", "label": "Ant\u00f3nio Barreto", "aliases": ["Ant\u00f3nio Miguel de Morais Barreto", "Ant\u00f3nio Miguel de Morais Taborda Barreto", "Ant\u00f3nio Miguel Morais Barreto"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q110260770", "label": "Ant\u00f3nio Bettencourt Silveira", "aliases": ["Ant\u00f3nio Jos\u00e9 Bettencourt da Silveira"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q9618733", "label": "Ant\u00f3nio Borga", "aliases": []}
 {"wiki_id": "http://www.wikidata.org/entity/Q4777532", "label": "Ant\u00f3nio Borges", "aliases": ["Ant\u00f3nio Mendo de Castel-Branco do Amaral Os\u00f3rio Borges"]}
@@ -180,7 +181,7 @@
 {"wiki_id": "http://www.wikidata.org/entity/Q365986", "label": "Ant\u00f3nio Correia de Campos", "aliases": ["Ant\u00f3nio Fernando Correia de Campos", "Correia de Campos"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q610788", "label": "Ant\u00f3nio Costa", "aliases": ["Antonio Costa", "Ant\u00f3nio Lu\u00eds Santos Costa", "Antonio Luis Santos da Costa", "Ant\u00f3nio Lu\u00eds Santos da Costa"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q97170467", "label": "Ant\u00f3nio Costa Silva", "aliases": ["Ant\u00f3nio Jos\u00e9 da Costa Silva"]}
-{"wiki_id": "http://www.wikidata.org/entity/Q2857733", "label": "Ant\u00f3nio Couto dos Santos", "aliases": ["Ant\u00f3nio Fernando Couto dos Santos", "Couto dos Santos"]}
+{"wiki_id": "http://www.wikidata.org/entity/Q2857733", "label": "Ant\u00f3nio Couto dos Santos", "aliases": ["Ant\u00f3nio Fernando Couto dos Santos", "Couto dos Santos", "Ant\u00f4nio Couto dos Santos"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q39040441", "label": "Ant\u00f3nio Cravid\u00e3o Duarte", "aliases": []}
 {"wiki_id": "http://www.wikidata.org/entity/Q106957328", "label": "Ant\u00f3nio Cunha", "aliases": ["Ant\u00f3nio Duarte Conde Almeida da Cunha"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q80330991", "label": "Ant\u00f3nio C\u00e2mara", "aliases": ["Antonio Camara"]}
@@ -330,7 +331,9 @@
 {"wiki_id": "http://www.wikidata.org/entity/Q131701063", "label": "Aur\u00e9lia Celorico", "aliases": []}
 {"wiki_id": "http://www.wikidata.org/entity/Q16495518", "label": "Avelino Ferreira Torres", "aliases": []}
 {"wiki_id": "http://www.wikidata.org/entity/Q65160123", "label": "Avelino Gon\u00e7alves", "aliases": ["Avelino Ant\u00f3nio Pacheco Gon\u00e7alves"]}
+{"wiki_id": "http://www.wikidata.org/entity/Q2857730", "label": "Bag\u00e3o F\u00e9lix", "aliases": []}
 {"wiki_id": "http://www.wikidata.org/entity/Q1253", "label": "Ban Ki-moon", "aliases": []}
+{"wiki_id": "http://www.wikidata.org/entity/Q76", "label": "Barack Obama", "aliases": []}
 {"wiki_id": "http://www.wikidata.org/entity/Q4777535", "label": "Barbosa de Melo", "aliases": ["Ant\u00f3nio Barbosa de Melo", "Ant\u00f3nio Moreira Barbosa de Melo"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q4867437", "label": "Basilio Farinha", "aliases": []}
 {"wiki_id": "http://www.wikidata.org/entity/Q9650912", "label": "Bas\u00edlio Horta", "aliases": ["Bas\u00edlio Adolfo Mendon\u00e7a Horta da Franca"]}
@@ -340,7 +343,7 @@
 {"wiki_id": "http://www.wikidata.org/entity/Q131281139", "label": "Belmiro Moita da Costa", "aliases": []}
 {"wiki_id": "http://www.wikidata.org/entity/Q349505", "label": "Belmiro de Azevedo", "aliases": ["Belmiro Azevedo", "Belmiro Mendes de Azevedo"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q136170139", "label": "Benjamim Leit\u00e3o Carvalho", "aliases": ["Benjamim Nunes Leit\u00e3o Carvalho"]}
-{"wiki_id": "http://www.wikidata.org/entity/Q43723", "label": "Benjamin Netanyahu", "aliases": ["Bibi", "Benyamin Netanyahu", "Bibi Netanyahu", "Binyamin Netanyahu"]}
+{"wiki_id": "http://www.wikidata.org/entity/Q43723", "label": "Benjamin Netanyahu", "aliases": ["Benyamin Netanyahu", "Bibi Netanyahu", "Binyamin Netanyahu", "Bibi"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q717865", "label": "Bento Ant\u00f3nio Gon\u00e7alves", "aliases": []}
 {"wiki_id": "http://www.wikidata.org/entity/Q9169371", "label": "Bernardino Soares", "aliases": ["Bernardino Jos\u00e9 Torr\u00e3o Soares"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q21065064", "label": "Bernardino Vasconcelos", "aliases": ["Bernardino Manuel de Vasconcelos"]}
@@ -514,7 +517,7 @@
 {"wiki_id": "http://www.wikidata.org/entity/Q102297248", "label": "Diana Ferreira", "aliases": ["Diana Jorge Martins Ferreira"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q106951460", "label": "Diana Santos", "aliases": ["Diana Vanessa da Concei\u00e7\u00e3o Santos"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q65496732", "label": "Dieter Dellinger", "aliases": []}
-{"wiki_id": "http://www.wikidata.org/entity/Q40722", "label": "Dilma Rousseff", "aliases": ["Rousseff", "Dilma Roussef", "Dilma Vana Rousseff", "Dilma Vana Rousseff Linhares"]}
+{"wiki_id": "http://www.wikidata.org/entity/Q40722", "label": "Dilma Rousseff", "aliases": ["Dilma Vana Rousseff Linhares", "Dilma Vana Rousseff", "Dilma Xana", "Dilma Roussef", "Rousseff"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q9207629", "label": "Diogo Feio", "aliases": ["Diogo Nuno de Gouveia Torres Feio"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q438868", "label": "Diogo Freitas do Amaral", "aliases": ["Freitas do Amaral", "Diogo de Freitas do Amaral", "Diogo Pinto de Freitas do Amaral"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q106991181", "label": "Diogo Le\u00e3o", "aliases": ["Diogo Feij\u00f3o Le\u00e3o Campos Rodrigues"]}
@@ -527,6 +530,7 @@
 {"wiki_id": "http://www.wikidata.org/entity/Q10268061", "label": "Domingos Jer\u00f3nimo", "aliases": ["Domingos Manuel Martins Jer\u00f3nimo"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q131702541", "label": "Domingos Lopes", "aliases": []}
 {"wiki_id": "http://www.wikidata.org/entity/Q184650", "label": "Donald Rumsfeld", "aliases": ["Donald Henry Rumsfeld"]}
+{"wiki_id": "http://www.wikidata.org/entity/Q22686", "label": "Donald Trump", "aliases": ["Presidente Trump", "Trump-Vance Administration (2025-2029)"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q946", "label": "Donald Tusk", "aliases": []}
 {"wiki_id": "http://www.wikidata.org/entity/Q123668405", "label": "Dora Lucas Neto", "aliases": []}
 {"wiki_id": "http://www.wikidata.org/entity/Q16591055", "label": "Dorilo In\u00e1cio", "aliases": ["Dorilo Jaime de Figueiredo Seruca In\u00e1cio"]}
@@ -536,7 +540,7 @@
 {"wiki_id": "http://www.wikidata.org/entity/Q110993770", "label": "Duarte Gouveia", "aliases": ["Duarte Paulo Braz\u00e3o Gouveia"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q5290424", "label": "Duarte Lima", "aliases": ["Domingos Duarte Lima"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q17318150", "label": "Duarte Maia de Albuquerque d'Orey", "aliases": []}
-{"wiki_id": "http://www.wikidata.org/entity/Q117304069", "label": "Duarte Maria de Sousa Ara\u00fajo Martins, Duque de Coimbra", "aliases": []}
+{"wiki_id": "http://www.wikidata.org/entity/Q117304069", "label": "Duarte Maria de Sousa Ara\u00fajo Martins, Duque de Coimbra", "aliases": ["Duarte Maria de Sousa Ara\u00fajo Martins"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q9212694", "label": "Duarte Marques", "aliases": ["Duarte Filipe Baptista de Matos Marques"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q106991775", "label": "Duarte Pacheco", "aliases": ["Duarte Rog\u00e9rio Matos Ventura Pacheco"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q1262756", "label": "Duarte Pio de Bragan\u00e7a", "aliases": ["D. Duarte Pio", "Dom Duarte de Bragan\u00e7a", "Dom Duarte Pio de Bragan\u00e7a", "Duarte de Bragan\u00e7a", "Duarte Pio"]}
@@ -666,7 +670,7 @@
 {"wiki_id": "http://www.wikidata.org/entity/Q9259658", "label": "Filipe Lobo d'\u00c1vila", "aliases": ["Filipe Tiago de Melo Sobral Lobo d'\u00c1vila"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q110759819", "label": "Filipe Melo", "aliases": ["Ant\u00f3nio Filipe Dias Melo Peixoto"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q107020056", "label": "Filipe Neto Brand\u00e3o", "aliases": ["Carlos Filipe de Andrade Neto Brand\u00e3o"]}
-{"wiki_id": "http://www.wikidata.org/entity/Q5448556", "label": "Filipe Nyusi", "aliases": ["Categoria:Filipe Nyusi", "Filipe Jacinto Nyusi"]}
+{"wiki_id": "http://www.wikidata.org/entity/Q5448556", "label": "Filipe Nyusi", "aliases": ["Categoria:Filipe Nyusi", "Filipe Jacinto Nyusi", "Nyusi"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q107020690", "label": "Filipe Pacheco", "aliases": ["Filipe Alexandre Pardal Pacheco"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q3745041", "label": "Filipe Soares Franco", "aliases": ["Filipe Pinto Basto Soares Franco"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q97276622", "label": "Filipe Sousa", "aliases": ["Filipe Martiniano Martins de Sousa"]}
@@ -738,6 +742,7 @@
 {"wiki_id": "http://www.wikidata.org/entity/Q4777562", "label": "Garcia Pereira", "aliases": ["Ant\u00f3nio Garcia Pereira", "Ant\u00f3nio Pestana Garcia Pereira"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q16940043", "label": "Genu\u00edno Madruga", "aliases": ["Genu\u00edno Alexandre Goulart Madruga"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q17444314", "label": "George Jamaloodin", "aliases": []}
+{"wiki_id": "http://www.wikidata.org/entity/Q207", "label": "George W. Bush", "aliases": []}
 {"wiki_id": "http://www.wikidata.org/entity/Q94016609", "label": "Georgette Ferreira", "aliases": ["Georgette de Oliveira Ferreira"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q15449193", "label": "Gerald Heere", "aliases": []}
 {"wiki_id": "http://www.wikidata.org/entity/Q10289236", "label": "Germano da Silva Domingos", "aliases": []}
@@ -838,6 +843,7 @@
 {"wiki_id": "http://www.wikidata.org/entity/Q16940072", "label": "H\u00e9lder Sousa Silva", "aliases": ["H\u00e9lder Ant\u00f3nio Guerra de Sousa Silva"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q1242658", "label": "H\u00e9lder Sp\u00ednola", "aliases": ["H\u00e9lder Sp\u00ednola de Freitas"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q10299830", "label": "Id\u00e1lia Serr\u00e3o", "aliases": ["Id\u00e1lia Maria Marques Salvador Serr\u00e3o", "Id\u00e1lia Maria Marques Salvador Serr\u00e3o de Menezes Moniz", "Id\u00e1lia Moniz", "Id\u00e1lia Salvador Serr\u00e3o"]}
+{"wiki_id": "http://www.wikidata.org/entity/Q378027", "label": "Igor Ivanov", "aliases": []}
 {"wiki_id": "http://www.wikidata.org/entity/Q10300977", "label": "Igrejas Caeiro", "aliases": ["Francisco Igrejas Caeiro"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q3116195", "label": "Ilda Figueiredo", "aliases": ["Maria Ilda da Costa Figueiredo"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q107029059", "label": "Il\u00eddia Quadrado", "aliases": ["Il\u00eddia Maria da Silva Fialho Quadrado"]}
@@ -847,11 +853,12 @@
 {"wiki_id": "http://www.wikidata.org/entity/Q17280335", "label": "In\u00eas Drummond", "aliases": ["In\u00eas de Drummond Ludovice Mendes Gomes"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q37830591", "label": "In\u00eas Lamego", "aliases": ["In\u00eas Dias Lamego"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q115763584", "label": "In\u00eas Ramires", "aliases": ["In\u00eas Pacheco Ramires Ferreira"]}
+{"wiki_id": "http://www.wikidata.org/entity/Q84171272", "label": "In\u00eas Sousa Real", "aliases": []}
 {"wiki_id": "http://www.wikidata.org/entity/Q30932423", "label": "In\u00eas Teot\u00f3nio Pereira", "aliases": ["In\u00eas D\u00f3ria N\u00f3brega Teot\u00f3nio Pereira Bourbon Ribeiro"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q1671880", "label": "In\u00eas Zuber", "aliases": ["In\u00eas Cristina Quintas Zuber", "In\u00eas Cristina Zuber"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q260092", "label": "In\u00eas de Medeiros", "aliases": ["In\u00eas de Saint-Maurice de Esteves de Medeiros Vitorino de Almeida"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q125398848", "label": "Irene Costa", "aliases": ["Irene Manuela Ferreira da Costa"]}
-{"wiki_id": "http://www.wikidata.org/entity/Q20045850", "label": "Ireneu Cabral Barreto", "aliases": ["Irineu Barreto"]}
+{"wiki_id": "http://www.wikidata.org/entity/Q20045850", "label": "Ireneu Cabral Barreto", "aliases": ["Ireneu Barreto", "Irineu Barreto"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q3154816", "label": "Isabel Al\u00e7ada", "aliases": ["Isabel Veiga", "Maria Isabel Gir\u00e3o de Melo Veiga Vilar"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q96195570", "label": "Isabel Camarinha", "aliases": ["Isabel Maria Robert Lopes Perdig\u00e3o Camarinha"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q67115913", "label": "Isabel Carvalhais", "aliases": ["Isabel Estrada Carvalhais", "Isabel Maria Estrada Carvalhais"]}
@@ -906,7 +913,7 @@
 {"wiki_id": "http://www.wikidata.org/entity/Q10305694", "label": "Jardim Gon\u00e7alves", "aliases": ["Jorge Jardim Gon\u00e7alves"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q57661", "label": "Jean-Claude Juncker", "aliases": []}
 {"wiki_id": "http://www.wikidata.org/entity/Q104531603", "label": "Jean-Louis Rollot", "aliases": []}
-{"wiki_id": "http://www.wikidata.org/entity/Q221997", "label": "Jeb Bush", "aliases": ["John Ellis Bush"]}
+{"wiki_id": "http://www.wikidata.org/entity/Q221997", "label": "Jeb Bush", "aliases": ["John Ellis \"Jeb\" Bush", "John Ellis Bush"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q312556", "label": "Jeff Bezos", "aliases": ["Jeffrey Preston Bezos"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q1033303", "label": "Jeroen Dijsselbloem", "aliases": []}
 {"wiki_id": "http://www.wikidata.org/entity/Q1688029", "label": "Jer\u00f3nimo de Sousa", "aliases": ["Jer\u00f3nimo Carvalho de Sousa"]}
@@ -958,6 +965,7 @@
 {"wiki_id": "http://www.wikidata.org/entity/Q11727578", "label": "Joaquim Vairinhos", "aliases": ["Joaquim Manuel dos Santos Vairinhos"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q135427350", "label": "Joaquina Branco", "aliases": []}
 {"wiki_id": "http://www.wikidata.org/entity/Q107123493", "label": "Joaquina Matos", "aliases": ["Maria Joaquina Baptista Quintans de Matos"]}
+{"wiki_id": "http://www.wikidata.org/entity/Q6279", "label": "Joe Biden", "aliases": ["Biden", "JRB", "Joe R. Biden Jr.", "Joey Biden", "Joseph R. Biden", "Joseph R. Biden Jr.", "Joseph R. Biden, Jr.", "Joseph Robinette Biden"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q6213542", "label": "Joel Hasse Ferreira", "aliases": ["Joel Eduardo Neves Hasse Ferreira"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q10390", "label": "John McCain", "aliases": ["John Sidney McCain III"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q273051", "label": "Jonas Savimbi", "aliases": ["Jonas Malheiro Savimbi", "Jonas Malheiro Sid\u00f3nio Savimbi", "Savimbi"]}
@@ -1063,7 +1071,7 @@
 {"wiki_id": "http://www.wikidata.org/entity/Q115842103", "label": "Jos\u00e9 Eduardo Franco Cheis", "aliases": ["Jos\u00e9 Eduardo Evangelista Franco Cheis"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q10309299", "label": "Jos\u00e9 Eduardo Martins", "aliases": ["Jos\u00e9 Eduardo Rego Mendes Martins"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q10309301", "label": "Jos\u00e9 Eduardo Moniz", "aliases": ["Jos\u00e9 Eduardo Soares Moniz"]}
-{"wiki_id": "http://www.wikidata.org/entity/Q57313", "label": "Jos\u00e9 Eduardo dos Santos", "aliases": ["Jose Eduardo dos Santos", "Jose Eduardo Van-D\u00fanem dos Santos", "Jos\u00e9 Eduardo Van-D\u00fanem dos Santos", "JES"]}
+{"wiki_id": "http://www.wikidata.org/entity/Q57313", "label": "Jos\u00e9 Eduardo dos Santos", "aliases": ["JES", "Jose Eduardo dos Santos", "Jose Eduardo Van-D\u00fanem dos Santos", "Jos\u00e9 Eduardo Van-D\u00fanem dos Santos"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q16337686", "label": "Jos\u00e9 Em\u00edlio da Silva", "aliases": ["major Jos\u00e9 Em\u00edlio da Silva"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q10309333", "label": "Jos\u00e9 Epif\u00e2nio da Franca", "aliases": []}
 {"wiki_id": "http://www.wikidata.org/entity/Q118733322", "label": "Jos\u00e9 Estevens", "aliases": ["Jos\u00e9 Fernandes Estevens"]}
@@ -1095,6 +1103,7 @@
 {"wiki_id": "http://www.wikidata.org/entity/Q136100481", "label": "Jos\u00e9 Leit\u00e3o", "aliases": ["Jos\u00e9 Maximiano Albuquerque Almeida Leit\u00e3o"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q64688", "label": "Jos\u00e9 Lello", "aliases": ["Jos\u00e9 Manuel Lello Ribeiro de Almeida"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q26256253", "label": "Jos\u00e9 Lino Tranquada Gomes", "aliases": []}
+{"wiki_id": "http://www.wikidata.org/entity/Q41395", "label": "Jos\u00e9 Luis Rodr\u00edguez Zapatero", "aliases": ["Jos\u00e9 Luis Zapatero", "Jos\u00e9 Luiz Zapatero", "Jos\u00e9 Rodr\u00edguez Sapatero"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q3186389", "label": "Jos\u00e9 Lu\u00eds Arnaut", "aliases": ["Jos\u00e9 Lu\u00eds Fazenda Arnaut Duarte"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q74256324", "label": "Jos\u00e9 Lu\u00eds Carneiro", "aliases": ["Jos\u00e9 Lu\u00eds Pereira Carneiro"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q10309832", "label": "Jos\u00e9 Lu\u00eds Ferreira", "aliases": ["Jos\u00e9 Lu\u00eds Teixeira Ferreira"]}
@@ -1114,7 +1123,6 @@
 {"wiki_id": "http://www.wikidata.org/entity/Q107090683", "label": "Jos\u00e9 Manuel Carpinteira", "aliases": ["Jos\u00e9 Manuel Vaz Carpinteira"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q111239999", "label": "Jos\u00e9 Manuel Casqueiro", "aliases": ["Jos\u00e9 Manuel Rodrigues Casqueiro"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q3186409", "label": "Jos\u00e9 Manuel Coelho", "aliases": ["Jos\u00e9 Manuel da Mata Vieira Coelho"]}
-{"wiki_id": "http://www.wikidata.org/entity/Q15849", "label": "Jos\u00e9 Manuel Dur\u00e3o Barroso", "aliases": ["Dur\u00e3o Barroso", "Jos\u00e9 Manuel Barroso", "Jose Manuel Durao Barroso"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q10309880", "label": "Jos\u00e9 Manuel Fernandes", "aliases": ["Jos\u00e9 Manuel Ferreira Fernandes"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q121433958", "label": "Jos\u00e9 Manuel Galv\u00e3o Teles", "aliases": ["Jos\u00e9 Manuel Archer Galv\u00e3o Teles"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q110463768", "label": "Jos\u00e9 Manuel Leite", "aliases": ["Jos\u00e9 Manuel Bravo Teixeira Leite"]}
@@ -1172,7 +1180,7 @@
 {"wiki_id": "http://www.wikidata.org/entity/Q107092998", "label": "Jos\u00e9 Rui Cruz", "aliases": ["Jos\u00e9 Rui Alves Duarte Cruz"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q6293985", "label": "Jos\u00e9 Santos Marques", "aliases": []}
 {"wiki_id": "http://www.wikidata.org/entity/Q110292211", "label": "Jos\u00e9 Saraiva", "aliases": ["Jos\u00e9 da Concei\u00e7\u00e3o Saraiva"]}
-{"wiki_id": "http://www.wikidata.org/entity/Q37060", "label": "Jos\u00e9 Saramago", "aliases": ["Jos\u00e9 de Sousa Saramago", "Saramago"]}
+{"wiki_id": "http://www.wikidata.org/entity/Q37060", "label": "Jos\u00e9 Saramago", "aliases": ["Saramago", "Jos\u00e9 de Sousa Saramago"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q10310504", "label": "Jos\u00e9 Sasportes", "aliases": ["Jos\u00e9 Est\u00eav\u00e3o Cangarato Sasportes"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q17420900", "label": "Jos\u00e9 Silva Domingos", "aliases": ["Jos\u00e9 da Silva Domingos"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q6291307", "label": "Jos\u00e9 Silva Peneda", "aliases": ["Jose Albino da Silva Peneda", "Jos\u00e9 Albino da Silva Peneda", "Jos\u00e9 Albino Silva Peneda", "Jos\u00e9 da Silva Peneda", "Silva Peneda"]}
@@ -1245,7 +1253,7 @@
 {"wiki_id": "http://www.wikidata.org/entity/Q10311748", "label": "Jo\u00e3o Loureiro", "aliases": ["Jo\u00e3o Eduardo Pinto de Loureiro"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q28650390", "label": "Jo\u00e3o Louren\u00e7o", "aliases": ["Jo\u00e3o Manuel Gon\u00e7alves Louren\u00e7o"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q10311770", "label": "Jo\u00e3o Lu\u00eds C\u00e9sar das Neves", "aliases": ["C\u00e9sar das Neves", "Jo\u00e3o C\u00e9sar das Neves"]}
-{"wiki_id": "http://www.wikidata.org/entity/Q125678727", "label": "Jo\u00e3o Lu\u00eds Fernandes", "aliases": ["Meias", "Rei das Meias"]}
+{"wiki_id": "http://www.wikidata.org/entity/Q125678727", "label": "Jo\u00e3o Lu\u00eds Fernandes", "aliases": ["Rei das Meias", "Meias"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q65497013", "label": "Jo\u00e3o Malato Correia", "aliases": ["Jo\u00e3o Lu\u00eds Malato Correia"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q131349388", "label": "Jo\u00e3o Manuel Falc\u00e3o Marques", "aliases": []}
 {"wiki_id": "http://www.wikidata.org/entity/Q131827972", "label": "Jo\u00e3o Manuel Marcelino Boa Estrela", "aliases": ["furriel Jo\u00e3o Manuel Marcelino Boa Estrela"]}
@@ -1355,7 +1363,7 @@
 {"wiki_id": "http://www.wikidata.org/entity/Q17420666", "label": "Luis Filipe Pais Beir\u00f4co", "aliases": ["Lu\u00eds Filipe Paes Beiroco"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q1055415", "label": "Luisa Morgantini", "aliases": []}
 {"wiki_id": "http://www.wikidata.org/entity/Q10320716", "label": "Luiz Fagundes Duarte", "aliases": ["Luiz Manuel Fagundes Duarte"]}
-{"wiki_id": "http://www.wikidata.org/entity/Q37181", "label": "Luiz In\u00e1cio Lula da Silva", "aliases": ["Luis In\u00e1cio Lula da Silva", "Luiz In\u00e1cio", "Luiz In\u00e1cio \"Lula\" da Silva", "Luiz In\u00e1cio da Silva", "Lula da Silva", "Lula"]}
+{"wiki_id": "http://www.wikidata.org/entity/Q37181", "label": "Luiz In\u00e1cio Lula da Silva", "aliases": ["Lula", "Luis In\u00e1cio Lula da Silva", "Luiz In\u00e1cio", "Luiz In\u00e1cio \"Lula\" da Silva", "Luiz In\u00e1cio da Silva", "Lula da Silva"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q127287935", "label": "Lurdes Breu", "aliases": ["Maria de Lurdes Breu", "Maria de Lurdes de Jesus Almeida Breu"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q1878147", "label": "Lutz Lienenk\u00e4mper", "aliases": []}
 {"wiki_id": "http://www.wikidata.org/entity/Q1382641", "label": "Lu\u00eds Amado", "aliases": ["Luis Amado", "Lu\u00eds Filipe Marques Amado"]}
@@ -1566,7 +1574,7 @@
 {"wiki_id": "http://www.wikidata.org/entity/Q23778295", "label": "Maria Fernanda Rollo", "aliases": ["Maria Fernanda Fernandes Garcia Rollo"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q107123187", "label": "Maria Gabriela Fonseca", "aliases": ["Maria Gabriela da Cunha Baptista Rodrigues da Fonseca"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q107123329", "label": "Maria Germana Rocha", "aliases": ["Maria Germana de Sousa Rocha", "Maria Germana Sousa Rocha Pimentel Rosete"]}
-{"wiki_id": "http://www.wikidata.org/entity/Q108905878", "label": "Maria Helena de Lemos de Oliveira e Carmo", "aliases": ["Helena Carmo", "Maria Helena de Lemos Oliveira e Carmo"]}
+{"wiki_id": "http://www.wikidata.org/entity/Q108905878", "label": "Maria Helena de Lemos de Oliveira e Carmo", "aliases": ["Helena Carmo", "Maria Helena de Lemos Oliveira e Carmo", "Maria Helena de Lemos de Oliveira e Carmo"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q111836608", "label": "Maria In\u00eas Cordovil", "aliases": ["Maria In\u00eas Cabral Cordovil"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q124477068", "label": "Maria In\u00eas Fernandes Maldonado Rodrigues", "aliases": ["Maria In\u00eas Rodrigues"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q126131999", "label": "Maria Jos\u00e9 Aguiar", "aliases": ["Maria Jos\u00e9 Gomes de Aguiar"]}
@@ -1609,6 +1617,7 @@
 {"wiki_id": "http://www.wikidata.org/entity/Q132147002", "label": "Mariana Canotilho", "aliases": []}
 {"wiki_id": "http://www.wikidata.org/entity/Q134720168", "label": "Mariana Crespo", "aliases": []}
 {"wiki_id": "http://www.wikidata.org/entity/Q125448766", "label": "Mariana Leit\u00e3o", "aliases": ["Mariana de Lemos Quint\u00e3o Correia Leit\u00e3o"]}
+{"wiki_id": "http://www.wikidata.org/entity/Q17496474", "label": "Mariana Mort\u00e1gua", "aliases": []}
 {"wiki_id": "http://www.wikidata.org/entity/Q107123818", "label": "Mariana Pereira da Silva", "aliases": ["Mariana da Concei\u00e7\u00e3o Pereira da Silva"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q28973799", "label": "Mariana Vieira da Silva", "aliases": ["Mariana Guimar\u00e3es Vieira da Silva"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q367910", "label": "Mariano Gago", "aliases": ["Jos\u00e9 Mariano Gago", "Jos\u00e9 Mariano Rebelo Pires Gago"]}
@@ -1622,7 +1631,7 @@
 {"wiki_id": "http://www.wikidata.org/entity/Q1899045", "label": "Mario Silva", "aliases": []}
 {"wiki_id": "http://www.wikidata.org/entity/Q440355", "label": "Marisa Matias", "aliases": ["Marisa Isabel dos Santos Matias"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q117409384", "label": "Marisabel Moutela", "aliases": ["Marisabel dos Santos Rocha Moutela"]}
-{"wiki_id": "http://www.wikidata.org/entity/Q36215", "label": "Mark Zuckerberg", "aliases": ["Mark Elliot Zuckerberg", "Mark Elliott Zuckerberg", "Zuckerberg"]}
+{"wiki_id": "http://www.wikidata.org/entity/Q36215", "label": "Mark Zuckerberg", "aliases": ["Zuckerberg", "Mark Elliot Zuckerberg", "Mark Elliott Zuckerberg"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q85180684", "label": "Marta Freitas", "aliases": ["Marta Lu\u00edsa de Freitas"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q6774170", "label": "Marta Santos Pais", "aliases": []}
 {"wiki_id": "http://www.wikidata.org/entity/Q125102851", "label": "Marta Silva", "aliases": ["Marta Sofia Martins da Silva Trindade"]}
@@ -1639,7 +1648,7 @@
 {"wiki_id": "http://www.wikidata.org/entity/Q10328972", "label": "Mesquita Machado", "aliases": ["Francisco Mesquita Machado", "Francisco Soares Mesquita Machado"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q57156955", "label": "Micaela Moreira Pinho", "aliases": []}
 {"wiki_id": "http://www.wikidata.org/entity/Q6834299", "label": "Michael Seufert", "aliases": ["Michael Lothar Mendes Seufert"]}
-{"wiki_id": "http://www.wikidata.org/entity/Q463533", "label": "Michel Temer", "aliases": ["Michel Elias Temer Lulia"]}
+{"wiki_id": "http://www.wikidata.org/entity/Q463533", "label": "Michel Temer", "aliases": ["Temer", "Michel Elias Temer Lulia"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q10329706", "label": "Miguel Albuquerque", "aliases": ["Miguel de Albuquerque", "Miguel Filipe Machado de Albuquerque"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q115175980", "label": "Miguel Alves", "aliases": ["Lu\u00eds Miguel da Silva Mendon\u00e7a Alves"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q28555818", "label": "Miguel Anacoreta Correia", "aliases": ["Jos\u00e9 Miguel Nunes Anacoreta Correia"]}
@@ -1726,6 +1735,7 @@
 {"wiki_id": "http://www.wikidata.org/entity/Q8023", "label": "Nelson Mandela", "aliases": []}
 {"wiki_id": "http://www.wikidata.org/entity/Q107126548", "label": "Nelson Peralta", "aliases": ["Nelson Ricardo Esteves Peralta"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q137780520", "label": "Nelson Silva", "aliases": ["N\u00e9lson Jos\u00e9 Bas\u00edlio Silva"]}
+{"wiki_id": "http://www.wikidata.org/entity/Q138828117", "label": "Nelson Vassalo", "aliases": ["Nelson Pedro Bai\u00e3o Vassalo"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q85875924", "label": "Nelson de Souza", "aliases": ["\u00c2ngelo Nelson do Ros\u00e1rio de Souza"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q64280455", "label": "Nicolae \u0218tef\u0103nu\u021b\u0103", "aliases": []}
 {"wiki_id": "http://www.wikidata.org/entity/Q329", "label": "Nicolas Sarkozy", "aliases": ["Nicolas Paul St\u00e9phane Sarkozy de Nagy-Bocsa"]}
@@ -1752,6 +1762,7 @@
 {"wiki_id": "http://www.wikidata.org/entity/Q106546986", "label": "Nuno Graciano", "aliases": ["Nuno Miguel Ventura dos Prazeres Graciano"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q1379494", "label": "Nuno Krus Abecasis", "aliases": ["Nuno Krus Abecassis"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q11794196", "label": "Nuno Magalh\u00e3es", "aliases": ["Nuno Miguel Miranda de Magalh\u00e3es"]}
+{"wiki_id": "http://www.wikidata.org/entity/Q10338219", "label": "Nuno Melo", "aliases": []}
 {"wiki_id": "http://www.wikidata.org/entity/Q108933009", "label": "Nuno Mergulh\u00e3o", "aliases": ["Nuno Alberto Pereira Mergulh\u00e3o"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q10338221", "label": "Nuno Miguel Henriques", "aliases": []}
 {"wiki_id": "http://www.wikidata.org/entity/Q10338225", "label": "Nuno Morais Sarmento", "aliases": ["Nuno Albuquerque Morais Sarmento", "Nuno de Albuquerque Botelho de Morais Sarmento", "Nuno de Albuquerque de Morais Sarmento", "Nuno de Albuquerque Moraes Sarmento"]}
@@ -1865,7 +1876,7 @@
 {"wiki_id": "http://www.wikidata.org/entity/Q135968151", "label": "Pedro Fidalgo Marques", "aliases": []}
 {"wiki_id": "http://www.wikidata.org/entity/Q10347467", "label": "Pedro Filipe Soares", "aliases": ["Pedro Filipe Gomes Soares"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q110757572", "label": "Pedro Fraz\u00e3o", "aliases": ["Pedro dos Santos Fraz\u00e3o", "Pedro Santos Fraz\u00e3o", "Pedro Saraiva Gon\u00e7alves dos Santos Fraz\u00e3o"]}
-{"wiki_id": "http://www.wikidata.org/entity/Q108861267", "label": "Pedro Goulart", "aliases": ["Pedro Goulart da Silva", "Pedro Martins Goulart da Silva"]}
+{"wiki_id": "http://www.wikidata.org/entity/Q108861267", "label": "Pedro Goulart", "aliases": ["Pedro Martins Goulart da Silva", "Pedro Goulart da Silva"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q22298080", "label": "Pedro Guerra", "aliases": ["Pedro Fernando dos Santos Alves Guerra"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q6271770", "label": "Pedro Guerreiro", "aliases": ["Pedro Miguel Neves Guerreiro"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q7159626", "label": "Pedro Guilherme-Moreira", "aliases": []}
@@ -1873,11 +1884,13 @@
 {"wiki_id": "http://www.wikidata.org/entity/Q10347577", "label": "Pedro Lynce", "aliases": ["Pedro Augusto Lynce de Abreu de Faria", "Pedro Augusto Lynce de Faria", "Pedro Lynce Faria"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q10347580", "label": "Pedro Machado", "aliases": ["Pedro Daniel Machado Gomes"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q25175950", "label": "Pedro Machete", "aliases": ["Pedro Manuel Pena Chancerelle de Machete"]}
+{"wiki_id": "http://www.wikidata.org/entity/Q20046100", "label": "Pedro Manuel dos Reis Alves Catarino", "aliases": ["Pedro Catarino"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q22005939", "label": "Pedro Marques", "aliases": ["Pedro Manuel Dias de Jesus Marques"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q16940524", "label": "Pedro Morais Soares", "aliases": ["Ant\u00f3nio Pedro Carvalho Morais Soares"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q2913325", "label": "Pedro Mota Soares", "aliases": ["Lu\u00eds Pedro Russo da Mota Soares"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q106356176", "label": "Pedro Neves", "aliases": ["Pedro Miguel Vicente Neves"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q131545283", "label": "Pedro Neves de Sousa", "aliases": ["Pedro Miguel Neves de Sousa"]}
+{"wiki_id": "http://www.wikidata.org/entity/Q10347660", "label": "Pedro Nuno Santos", "aliases": []}
 {"wiki_id": "http://www.wikidata.org/entity/Q115763593", "label": "Pedro Nuno Teixeira", "aliases": ["Pedro Nuno de Freitas Lopes Teixeira"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q50591864", "label": "Pedro Pais de Almeida", "aliases": []}
 {"wiki_id": "http://www.wikidata.org/entity/Q57615", "label": "Pedro Passos Coelho", "aliases": ["Passos Coelho", "Pedro Manuel Mamede Passos Coelho"]}
@@ -1930,6 +1943,7 @@
 {"wiki_id": "http://www.wikidata.org/entity/Q65497047", "label": "Ra\u00fal Brito", "aliases": ["Ra\u00fal Fernando Sousela da Costa Brito"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q46809", "label": "Ra\u00fal Castro", "aliases": ["Raul Castro", "Ra\u00fal Castro Ruz", "Ra\u00fal Modesto Castro Ruz"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q10357753", "label": "Ra\u00fal Miguel Rosado Fernandes", "aliases": ["Raul Miguel de Oliveira Rosado Fernandes", "Ra\u00fal Miguel de Oliveira Rosado Fernandes", "Raul Miguel Rosado Fernandes", "Rosado Fernandes"]}
+{"wiki_id": "http://www.wikidata.org/entity/Q39259", "label": "Recep Tayyip Erdo\u011fan", "aliases": ["Recep Erdogan", "Erdo\u011fan", "Erdogan"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q607679", "label": "Regina Bastos", "aliases": ["Regina Maria Pinto da Fonseca Ramos Bastos"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q101229642", "label": "Regina Tavares da Silva", "aliases": []}
 {"wiki_id": "http://www.wikidata.org/entity/Q113866", "label": "Reinhold Hilbers", "aliases": []}
@@ -1962,7 +1976,7 @@
 {"wiki_id": "http://www.wikidata.org/entity/Q107177088", "label": "Ricardo Vicente", "aliases": ["Ricardo Silva Vicente"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q127603538", "label": "Ricardo da Silva Passos", "aliases": []}
 {"wiki_id": "http://www.wikidata.org/entity/Q41799044", "label": "Rita Almeida", "aliases": []}
-{"wiki_id": "http://www.wikidata.org/entity/Q107177442", "label": "Rita Borges Madeira", "aliases": ["Rita Mafalda Nobre Borges Madeira"]}
+{"wiki_id": "http://www.wikidata.org/entity/Q107177442", "label": "Rita Borges Madeira", "aliases": ["Rita Mafalda Nobre Borges Madeira", "Rita Madeira"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q125207866", "label": "Rita J\u00fadice", "aliases": ["Rita Alarc\u00e3o J\u00fadice", "Rita Fragoso de Rhodes Alarc\u00e3o J\u00fadice de Abreu e Mota"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q108118314", "label": "Rita Marques", "aliases": ["Rita Baptista Marques"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q110782692", "label": "Rita Matias", "aliases": ["Rita Maria Cid Matias"]}
@@ -2031,6 +2045,7 @@
 {"wiki_id": "http://www.wikidata.org/entity/Q7378729", "label": "Rui Rio", "aliases": ["Rui Fernando da Silva Rio"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q107182206", "label": "Rui Silva", "aliases": ["Rui Manuel Ferreira da Silva"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q329933", "label": "Rui Sousa", "aliases": ["Rui Miguel Sousa Barbosa"]}
+{"wiki_id": "http://www.wikidata.org/entity/Q1337232", "label": "Rui Tavares", "aliases": []}
 {"wiki_id": "http://www.wikidata.org/entity/Q20046154", "label": "Rui Vasco de Vasconcelos e S\u00e1 Vaz", "aliases": []}
 {"wiki_id": "http://www.wikidata.org/entity/Q115043728", "label": "Ruth Rita", "aliases": ["Ruth Carla Revez Rita Campos"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q7383631", "label": "Ruy Seabra", "aliases": []}
@@ -2042,8 +2057,8 @@
 {"wiki_id": "http://www.wikidata.org/entity/Q55168313", "label": "Salvador Massano Cardoso", "aliases": ["Salvador Manuel Correia Massano Cardoso"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q10367513", "label": "Sanches Os\u00f3rio", "aliases": ["Jos\u00e9 Eduardo Fernandes Sanches Os\u00f3rio", "Jos\u00e9 Sanches Os\u00f3rio"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q107360656", "label": "Sandra Cunha", "aliases": ["Sandra Mestre da Cunha"]}
-{"wiki_id": "http://www.wikidata.org/entity/Q107183173", "label": "Sandra Pereira", "aliases": ["Sandra Cristina de Sequeiros Pereira"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q64524420", "label": "Sandra Pereira", "aliases": ["Sandra Maria de Brito Pereira"]}
+{"wiki_id": "http://www.wikidata.org/entity/Q107183173", "label": "Sandra Pereira", "aliases": ["Sandra Cristina de Sequeiros Pereira"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q125918514", "label": "Sandra Ribeiro", "aliases": ["Sandra Margarida de Melo Pereira Ribeiro"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q107193833", "label": "Santinho Pacheco", "aliases": ["Ant\u00f3nio Jos\u00e9 Santinho Pacheco"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q64698738", "label": "Sara Amancio", "aliases": []}
@@ -2057,6 +2072,7 @@
 {"wiki_id": "http://www.wikidata.org/entity/Q4391066", "label": "Sharif Rahimzoda", "aliases": []}
 {"wiki_id": "http://www.wikidata.org/entity/Q90526705", "label": "Sid\u00f3nio Bettencourt", "aliases": ["Sid\u00f3nio Manuel Moniz Bettencourt"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q356691", "label": "Sid\u00f3nio Pais", "aliases": ["Sid\u00f3nio Bernardino Cardoso da Silva Pais", "Sid\u00f3nio Paes"]}
+{"wiki_id": "http://www.wikidata.org/entity/Q11860", "label": "Silvio Berlusconi", "aliases": []}
 {"wiki_id": "http://www.wikidata.org/entity/Q10372258", "label": "Sita Valles", "aliases": ["Sita valles"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q47139", "label": "Slobodan Milo\u0161evi\u0107", "aliases": ["Milosevic", "Slobodan Milochevitch", "Slobodan Milosevic", "Slobodan Milo\u0161evic"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q106625381", "label": "Sofia Afonso Ferreira", "aliases": []}
@@ -2076,16 +2092,17 @@
 {"wiki_id": "http://www.wikidata.org/entity/Q108897072", "label": "Susagna Arasanz", "aliases": ["Susagna Arasanz i Serra"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q2368982", "label": "Susana Amador", "aliases": ["Susana de F\u00e1tima Carvalho Amador"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q107208208", "label": "Susana Correia", "aliases": ["Susana Alexandra Lopes Correia"]}
+{"wiki_id": "http://www.wikidata.org/entity/Q133588507", "label": "Susana Goulart Costa", "aliases": []}
 {"wiki_id": "http://www.wikidata.org/entity/Q109855753", "label": "Susana Helena Correia", "aliases": []}
 {"wiki_id": "http://www.wikidata.org/entity/Q60999835", "label": "Susana Prada", "aliases": ["Susana Lu\u00edsa Rodrigues Nascimento Prada"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q65499619", "label": "S\u00e9rgio Azevedo", "aliases": ["S\u00e9rgio Sousa Lopes Freire de Azevedo"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q136118191", "label": "S\u00e9rgio Carrinho", "aliases": ["S\u00e9rgio Morais da Concei\u00e7\u00e3o Carrinho"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q127009304", "label": "S\u00e9rgio Gon\u00e7alves", "aliases": ["S\u00e9rgio Miguel Sousa Gon\u00e7alves"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q117409487", "label": "S\u00e9rgio Humberto", "aliases": ["S\u00e9rgio Humberto Pereira da Silva"]}
+{"wiki_id": "http://www.wikidata.org/entity/Q6272417", "label": "S\u00e9rgio Jos\u00e9 Ferreira Ribeiro", "aliases": ["S\u00e9rgio Ribeiro"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q10376154", "label": "S\u00e9rgio Lipari Pinto", "aliases": ["S\u00e9rgio Lipari Garcia Pinto"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q505685", "label": "S\u00e9rgio Marques", "aliases": ["M\u00e1rio S\u00e9rgio Quaresma Gon\u00e7alves Marques"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q16193358", "label": "S\u00e9rgio Rebelo", "aliases": []}
-{"wiki_id": "http://www.wikidata.org/entity/Q6272417", "label": "S\u00e9rgio Ribeiro", "aliases": ["S\u00e9rgio Jos\u00e9 Ferreira Ribeiro"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q123145869", "label": "S\u00e9rgio Silva", "aliases": ["S\u00e9rgio Carlos Branco Barros e Silva"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q16940806", "label": "S\u00e9rgio Silva Monteiro", "aliases": []}
 {"wiki_id": "http://www.wikidata.org/entity/Q7666117", "label": "S\u00e9rgio Sousa Pinto", "aliases": ["S\u00e9rgio Paulo Mendes de Sousa Pinto"]}
@@ -2099,7 +2116,7 @@
 {"wiki_id": "http://www.wikidata.org/entity/Q124743944", "label": "S\u00f3nia Ramos", "aliases": ["S\u00f3nia Cristina Silva dos Ramos"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q125554204", "label": "S\u00f3nia dos Reis", "aliases": []}
 {"wiki_id": "http://www.wikidata.org/entity/Q7689030", "label": "Tavares Moreira", "aliases": ["Jos\u00e9 Alberto Tavares Moreira", "Jos\u00e9 Alberto Vasconcelos Tavares Moreira"]}
-{"wiki_id": "http://www.wikidata.org/entity/Q1624159", "label": "Tchiz\u00e9 dos Santos", "aliases": ["Welwitchia Jos\u00e9 dos Santos", "Welwitschea Abrantes Jos\u00e9 dos Santos", "Welwitschea dos Santos", "Welwitschia dos Santos"]}
+{"wiki_id": "http://www.wikidata.org/entity/Q1624159", "label": "Tchiz\u00e9 dos Santos", "aliases": ["Welwitchia Jos\u00e9 dos Santos", "Welwitschea Abrantes Jos\u00e9 dos Santos", "Welwitschea dos Santos", "Welwitschia dos Santos", "Tchiz\u00e9 dos Santos"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q107209912", "label": "Telma Guerreiro", "aliases": ["Telma Cristina Felizardo Guerreiro"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q16940875", "label": "Telmo Correia", "aliases": ["Telmo Augusto Gomes de Noronha Correia"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q131545196", "label": "Telmo Faria", "aliases": ["Telmo Henrique Correia Daniel Faria"]}
@@ -2158,7 +2175,7 @@
 {"wiki_id": "http://www.wikidata.org/entity/Q107523979", "label": "Victor Cruz", "aliases": ["Victor do Couto Cruz"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q10390341", "label": "Victor Cunha Rego", "aliases": ["Victor da Cunha Rego", "Victor Jos\u00e9 Costa da Cunha Rego", "Victor Jos\u00e9 da Costa Rego", "V\u00edtor Cunha Rego", "Vitor da Cunha Rego"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q10390363", "label": "Victor Manuel Freire Boga", "aliases": ["V\u00edtor Manuel Freire Boga"]}
-{"wiki_id": "http://www.wikidata.org/entity/Q10390387", "label": "Victor de S\u00e1 Machado", "aliases": ["Victor Ant\u00f3nio Augusto Nunes de S\u00e1 Machado", "V\u00edtor de S\u00e1 Machado", "V\u00edtor S\u00e1 Machado"]}
+{"wiki_id": "http://www.wikidata.org/entity/Q10390387", "label": "Victor de S\u00e1 Machado", "aliases": ["V\u00edtor de S\u00e1 Machado", "V\u00edtor S\u00e1 Machado", "Victor Ant\u00f3nio Augusto Nunes de S\u00e1 Machado"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q65496922", "label": "Vidigal Amaro", "aliases": ["Ant\u00f3nio Jos\u00e9 Monteiro Vidigal Amaro"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q124390811", "label": "Violante Saramago Matos", "aliases": ["Violante dos Reis Saramago", "Violante dos Reis Saramago Matos", "Violante Matos", "Violante Saramago"]}
 {"wiki_id": "http://www.wikidata.org/entity/Q85854367", "label": "Virg\u00edlio Azevedo", "aliases": []}
