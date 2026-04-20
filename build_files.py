@@ -10,11 +10,6 @@ from SPARQLWrapper import SPARQLWrapper, JSON
 endpoint_url = "https://query.wikidata.org/sparql"
 
 
-def write_iterator_to_file(iter_struct, filename):
-    with open(filename, "wt", encoding="UTF8") as f_out:
-        for el in iter_struct:
-            f_out.write(str(el) + "\n")
-
 
 def just_sleep(upper_bound=3, verbose=False):
     sec = randint(1, upper_bound)
@@ -96,13 +91,9 @@ def main():
         key=lambda d: d['label'],
     )
 
-    query_names = open('entities_names.txt', 'wt', encoding="UTF8")
-    kb_index = open('entities_kb.txt', 'wt', encoding="UTF8")
-    for d in all_docs:
-        query_names.write(d['label']+'\n')
-        kb_index.write(json.dumps(d)+'\n')
-    query_names.close()
-    kb_index.close()
+    with open('entities_kb.jsonl', 'wt', encoding="UTF8") as kb_index:
+        for d in all_docs:
+            kb_index.write(json.dumps(d)+'\n')
 
 
 if __name__ == '__main__':
