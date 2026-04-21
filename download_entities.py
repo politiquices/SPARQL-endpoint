@@ -22,13 +22,16 @@ def just_sleep(lower_bound=1, upper_bound=3, verbose=False):
     sleep(sec)
 
 
+def sleep_with_jitter(base_seconds, jitter=5):
+    sleep(base_seconds + randint(0, jitter))
+
+
 def read_ground_truth(filename, skip_classes: List[str] = None):
     if skip_classes is None:
         skip_classes = []
     with open(filename, encoding="UTF8") as f_in:
         data = [json.loads(line) for line in f_in]
     data = [entry for entry in data if entry["label"] not in skip_classes]
-    print("Considering only the classes:", sorted(set([entry["label"] for entry in data])))
     return data
 
 
@@ -36,17 +39,17 @@ def read_ground_truth(filename, skip_classes: List[str] = None):
 affiliated_with_relevant_political_party = """
     SELECT DISTINCT ?person ?personLabel
         WHERE {
-          { VALUES ?relevant_parties 
-                { wd:Q59325416 wd:Q884840 wd:Q1054298 wd:Q63645885 wd:Q46122950 wd:Q19694667 
-                   wd:Q16947563 wd:Q6516904 wd:Q5899673 wd:Q605026 wd:Q20895387 wd:Q5154439 
-                   wd:Q2054628 wd:Q10345627 wd:Q1819658 wd:Q6540639 wd:Q2054681 wd:Q1332539 
-                   wd:Q1851550 wd:Q595575 wd:Q847263 wd:Q2054807 wd:Q3293542 wd:Q7232654 
-                   wd:Q20901233 wd:Q10345705 wd:Q2054840 wd:Q1352945 wd:Q2105350 wd:Q18166125 
+          { VALUES ?relevant_parties
+                { wd:Q59325416 wd:Q884840 wd:Q1054298 wd:Q63645885 wd:Q46122950 wd:Q19694667
+                   wd:Q16947563 wd:Q6516904 wd:Q5899673 wd:Q605026 wd:Q20895387 wd:Q5154439
+                   wd:Q2054628 wd:Q10345627 wd:Q1819658 wd:Q6540639 wd:Q2054681 wd:Q1332539
+                   wd:Q1851550 wd:Q595575 wd:Q847263 wd:Q2054807 wd:Q3293542 wd:Q7232654
+                   wd:Q20901233 wd:Q10345705 wd:Q2054840 wd:Q1352945 wd:Q2105350 wd:Q18166125
                    wd:Q65164025 wd:Q769829 wd:Q46122950
                 }
-             ?person wdt:P102 ?relevant_parties . 
+             ?person wdt:P102 ?relevant_parties .
              ?person rdfs:label ?personLabel }
-        FILTER(LANG(?personLabel) = "pt")
+        FILTER(LANG(?personLabel) = "pt" || LANG(?personLabel) = "pt-br" || LANG(?personLabel) = "en")
     } ORDER BY ?personLabel
     """
 
@@ -62,8 +65,8 @@ portuguese_persons_occupations = """
       ?person wdt:P569 ?date_of_birth .
       ?person rdfs:label ?personLabel.
       FILTER(?date_of_birth >= "1935-01-01T00:00:00"^^xsd:dateTime )
-      FILTER(LANG(?personLabel) = "pt")
-    } 
+      FILTER(LANG(?personLabel) = "pt" || LANG(?personLabel) = "pt-br" || LANG(?personLabel) = "en")
+    }
     ORDER BY ?personLabel
     """
 
@@ -161,7 +164,7 @@ def get_parties(personalities, batch_size=200):
                     }}
                 }}
             """
-        just_sleep(3)
+        just_sleep(2, 5)
         results = query_wikidata(political_parties)
         parties_id.extend([party['wiki_id']['value'].split("/")[-1] for party in results['results']['bindings']
                            if 'wiki_id' in party])
@@ -193,7 +196,7 @@ def get_relevant_persons_based_on_public_office_positions():
       ?person wdt:P39 ?positions.
       ?person rdfs:label ?personLabel .
       ?person wdt:P569 ?date_of_birth .
-      FILTER(LANG(?personLabel) = "pt")
+      FILTER(LANG(?personLabel) = "pt" || LANG(?personLabel) = "pt-br" || LANG(?personLabel) = "en")
       FILTER(?date_of_birth >= "1935-01-01T00:00:00"^^xsd:dateTime )
     }} ORDER BY ?personLabel
     """
@@ -213,18 +216,24 @@ def query_wikidata(sparql_query, max_retries=5):
             if e.code == 429:
                 retry_after = int(e.headers.get("Retry-After", 60))
                 print(f"Rate limited (429). Waiting {retry_after}s before retry {attempt + 1}/{max_retries}...")
-                sleep(retry_after)
+                sleep_with_jitter(retry_after)
             else:
                 raise
-    raise RuntimeError(f"SPARQL query failed after {max_retries} retries due to rate limiting")
+        except urllib.error.URLError as e:
+            wait = 30 * (2 ** attempt)
+            print(f"Network error ({e.reason}). Waiting {wait}s before retry {attempt + 1}/{max_retries}...")
+            sleep(wait)
+    raise RuntimeError(f"SPARQL query failed after {max_retries} retries")
 
 
 def read_extra_entities(f_name):
     with open(f_name) as f_in:
         data = json.load(f_in)
-        remove = [url.split("/")[-1] for url in data['persons']['remove']]
-        add = [url.split("/")[-1] for url in data['persons']['add']]
-    return add, remove
+        remove = list(data['personalities']['remove'].keys())
+        add = (list(data['personalities']['add']['portuguese'].keys()) +
+               list(data['personalities']['add']['international'].keys()))
+        parties = list(data['political_parties'].keys())
+    return add, remove, parties
 
 
 def get_wiki_ids_from_annotations(f_name):
@@ -246,7 +255,7 @@ def gather_wiki_ids(queries, to_add=None, to_remove=None):
     relevant_ids = []
 
     for query in queries:
-        just_sleep(3)
+        just_sleep(2, 5)
         results = query_wikidata(query)
         wiki_ids = [r["person"]["value"].split("/")[-1] for r in results["results"]["bindings"]]
         relevant_ids.extend(wiki_ids)
@@ -278,31 +287,45 @@ def download(ids_to_retrieve, overwrite, lang="pt"):
     print(f"\nDownloading {len(ids_to_retrieve)} unique entities")
     if not os.path.exists(default_dir):
         os.makedirs(default_dir)
+    failed = {}
     for idx, wiki_id in enumerate(sorted(ids_to_retrieve)):
         f_name = os.path.join(default_dir, wiki_id + ".ttl")
         if os.path.exists(f_name) and not overwrite:
             print(f"skipped {f_name}")
             continue
         print(f"Downloading {f_name} - {str(idx)}/ {str(len(set(ids_to_retrieve)))}")
-        if idx > 0:
-            just_sleep(lower_bound=2, upper_bound=5)
-        try:
-            for attempt in range(5):
+        just_sleep(lower_bound=2, upper_bound=5)
+        for attempt in range(5):
+            try:
                 r = requests.get(base_url, params={"format": 'ttl', "id": wiki_id, "uselang": lang},
                                  headers={"User-Agent": USER_AGENT})
                 if r.status_code == 429:
                     retry_after = int(r.headers.get("Retry-After", 60))
                     print(f"Rate limited (429). Waiting {retry_after}s before retry {attempt + 1}/5...")
-                    sleep(retry_after)
+                    sleep_with_jitter(retry_after)
                     continue
                 r.raise_for_status()
                 with open(f_name, "wt") as f_out:
                     f_out.write(r.text)
+                if attempt > 0:
+                    print(f"Retry succeeded for {wiki_id} (attempt {attempt + 1}/5)")
                 break
-            else:
-                print(f"Failed to download {wiki_id} after 5 retries due to rate limiting")
-        except requests.exceptions.ConnectTimeout:
-            print(f"Connection timed out for {wiki_id}, skipping")
+            except (requests.exceptions.ConnectTimeout, requests.exceptions.ConnectionError) as e:
+                wait = 10 * (attempt + 1)
+                print(f"Connection error for {wiki_id} (attempt {attempt + 1}/5): {e}. Retrying in {wait}s...")
+                if attempt < 4:
+                    sleep(wait)
+        else:
+            print(f"Failed to download {wiki_id} after 5 retries")
+            failed[wiki_id] = "connection error after 5 retries"
+
+    if failed:
+        print(f"\n{len(failed)} entities failed to download:")
+        for wiki_id, reason in sorted(failed.items()):
+            print(f"  {wiki_id}: {reason}")
+    else:
+        print("\nAll entities downloaded successfully")
+    return failed
 
 
 def create_args():
@@ -345,13 +368,14 @@ def main():
     ]
 
     # get wiki entities ids from a manual curated list
-    add, remove = read_extra_entities('entities_config.json')
+    add, remove, extra_parties = read_extra_entities('entities_config.json')
 
     # get all the unique entities wiki ids: queries + manual list
     entities_ids = gather_wiki_ids(queries, to_add=add, to_remove=remove)
 
-    # get all unique parties
+    # get all unique parties (affiliated with persons + manually listed)
     parties_ids = get_parties(entities_ids)
+    parties_ids.update(extra_parties)
 
     # add also the entities' wiki id from annotations data
     if args.train_data:
@@ -359,7 +383,9 @@ def main():
         entities_ids.extend(get_wiki_ids_from_annotations(args.train_data))
 
     # download the TTL for each entity
-    download(list(set(entities_ids).union(parties_ids)), overwrite)
+    failed = download(list(set(entities_ids).union(parties_ids)), overwrite)
+    if failed:
+        sys.exit(1)
 
 
 if __name__ == "__main__":
