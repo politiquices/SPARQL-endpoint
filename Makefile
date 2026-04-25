@@ -13,6 +13,7 @@ download-jena:
 		https://archive.apache.org/dist/jena/binaries/apache-jena-5.1.0.tar.gz
 
 sparql:
+	docker compose -f fuseki-docker/docker-compose.yml down -v
 	docker compose -f fuseki-docker/docker-compose.yml up --build -d
 
 wikifiles:
