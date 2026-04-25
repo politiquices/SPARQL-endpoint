@@ -291,7 +291,6 @@ def download(ids_to_retrieve, overwrite, lang="pt"):
     for idx, wiki_id in enumerate(sorted(ids_to_retrieve)):
         f_name = os.path.join(default_dir, wiki_id + ".ttl")
         if os.path.exists(f_name) and not overwrite:
-            print(f"skipped {f_name}")
             continue
         print(f"Downloading {f_name} - {str(idx)}/ {str(len(set(ids_to_retrieve)))}")
         just_sleep(lower_bound=2, upper_bound=5)
