@@ -10,5 +10,5 @@ services:
 
 networks:
   politiquices:
+    external: true
     name: politiquices
-    driver: bridge
